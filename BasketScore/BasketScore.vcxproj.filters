@@ -13,33 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\imports">
-      <UniqueIdentifier>{c847d8ae-1825-43e1-b225-ba284b090edf}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fileHandling.c">
-      <Filter>Source Files\imports</Filter>
+    <ClCompile Include="FileHandler.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="players.c">
-      <Filter>Source Files\imports</Filter>
+    <ClCompile Include="UserInterface.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="printSource.c">
-      <Filter>Source Files\imports</Filter>
+    <ClCompile Include="UserInterface.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fileHandling.h">
-      <Filter>Source Files\imports</Filter>
+    <ClInclude Include="FileHandler.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="players.h">
-      <Filter>Source Files\imports</Filter>
-    </ClInclude>
-    <ClInclude Include="printSource.h">
-      <Filter>Source Files\imports</Filter>
+    <ClInclude Include="Players.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

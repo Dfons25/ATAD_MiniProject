@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1541F5CA-FE0A-4EB4-9D13-B74B9B4775ED}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
+    <ProjectGuid>{5CE73539-0ABA-4956-A7C9-F086FA54497C}</ProjectGuid>
+    <RootNamespace>BasketScore</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,15 +118,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="fileHandling.c" />
+    <ClCompile Include="FileHandler.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="players.c" />
-    <ClCompile Include="printSource.c" />
+    <ClCompile Include="UserInterface.c" />
+    <ClCompile Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fileHandling.h" />
-    <ClInclude Include="players.h" />
-    <ClInclude Include="printSource.h" />
+    <ClInclude Include="FileHandler.h" />
+    <ClInclude Include="Players.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

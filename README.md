@@ -1,6 +1,6 @@
 ## Basket Scores
 
-# TODO:
+TODO:
 
 - Comandos A (Informação sobre os jogadores):
 

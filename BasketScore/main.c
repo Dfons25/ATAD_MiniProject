@@ -1,26 +1,35 @@
+/* MINI-PROJETO 1 ATAD 2018
+* Identificacao dos Alunos:
+*
+*      Numero: ######### | Nome: ###############################
+*      Numero: ######### | Nome: ###############################
+*
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <locale.h>
-#include<windows.h>
 
-#include "players.h"
-#include "printSource.h"
-#include "players.h"
 
-int main()
-{
-	setlocale(LC_CTYPE, "Portuguese");
-	system("mode 84");
+// Bibliotecas Costumizadas
+#include "UserInterface.h"
+#include "FileHandler.h"
 
-	//Passagem de ficheiro para a estrutura
-	/*PlayersGrid grid = playersGridCreate(200);
-	importPlayersFromFile("players_1.csv", &grid);
-	playersGridPrint(&grid);*/
+/*
+* Descrição do Programa
+*/
+int main(int argc, char** argv) {
 
+	/* declaracao de variaveis */
+
+	//importPlayersFromFile("players_1.csv");
+
+	/* interpretador de comandos */
 	char command[21];
 	int quit = 0;
 	while (!quit) {
+
+
 
 		printCommandsMenu();
 		fgets(command, sizeof(command), stdin);
@@ -32,11 +41,12 @@ int main()
 			quit = 1; /* vai provocar a saída do interpretador */
 		}
 		else if (equalsStringIgnoreCase(command, "LOADG")) {
-			printf("Comando LOADP nao implementado.\n");
+			/* invocação da função responsável pela respetiva
+			funcionalidade. Remover printf seguinte após implementação */
+			printf("Comando LOADG nao implementado.\n");
 		}
 		else if (equalsStringIgnoreCase(command, "LOADP")) {
-			PlayersGrid grid = playersGridCreate(200);
-			importPlayersFromFile(&grid);
+			printf("Comando LOADP nao implementado.\n");
 		}
 		else if (equalsStringIgnoreCase(command, "SHOWP")) {
 			printf("Comando SHOWP nao implementado.\n");
@@ -76,8 +86,4 @@ int main()
 	/* libertar memória e apresentar mensagem de saída. */
 
 	return (EXIT_SUCCESS);
-
-	system("pause");
-	return 0;
 }
-
