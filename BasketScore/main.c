@@ -9,18 +9,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
 
 // Bibliotecas Costumizadas
 #include "UserInterface.h"
-#include "PlayersInfo.h"
+#include "FileHandler.h"
+#include "Players.h"
+#include "PlayersGrid.h"
 
 /*
 * Descrição do Programa
 */
+
+
 int main(int argc, char** argv) {
 
+	setlocale(LC_CTYPE, "Portuguese");
 	/* declaracao de variaveis */
+	char filename[20];
+	PlayersGrid grid = createPlayersGrid(200);
+	unsigned int option;
 
 	//importPlayersFromFile("players_1.csv");
 
@@ -29,8 +38,7 @@ int main(int argc, char** argv) {
 	int quit = 0;
 	while (!quit) {
 
-		// Limpar a variável do comando
-		memset(command, 0, sizeof(command));
+
 
 		printCommandsMenu();
 		fgets(command, sizeof(command), stdin);
@@ -47,10 +55,30 @@ int main(int argc, char** argv) {
 			printf("Comando LOADG nao implementado.\n");
 		}
 		else if (equalsStringIgnoreCase(command, "LOADP")) {
-			loadp();
+			
+			printf("LOADP\n\tPlease enter the name of the file: ");
+			fgets(filename, sizeof(filename), stdin);
+			filename[strlen(filename) - 1] = '\0';
+
+			importPlayersFromFile(filename, &grid);
+			
 		}
 		else if (equalsStringIgnoreCase(command, "SHOWP")) {
-			printf("Comando SHOWP nao implementado.\n");
+			
+			printf("SHOWP\n\t1 - Sort [A-Z]\n\t2 - Sort [Z-A]\n\tOption> ");
+			scanf_s("%d", &option);
+			getchar();
+
+			switch (option) {
+				case 1: 
+					orderPlayersGridAsc(&grid);
+				break;
+				case 2:
+					orderPlayersGridDesc(&grid);
+				break;
+			}
+
+			printPlayersGrid(&grid);
 		}
 		else if (equalsStringIgnoreCase(command, "TABLE")) {
 			printf("Comando TABLE nao implementado.\n");
@@ -80,7 +108,7 @@ int main(int argc, char** argv) {
 			printf("Comando IDEALTEAM nao implementado.\n");
 		}
 		else {
-			printf("Comando nao encontrado.\n");
+			printf("Comando não encontrado.\n");
 		}
 	}
 

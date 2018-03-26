@@ -1,9 +1,7 @@
+#include "UserInterface.h"
 
 int equalsStringIgnoreCase(char str1[], char str2[]) {
-	/* Apenas faz uma comparacao utilizando o strcmp.
-	* Necessita de modificacao para obter uma comparacao
-	* 'case insensitive' */
-	return (strcmp(str1, str2) == 0);
+	return (_strcmpi(str1, str2) == 0);
 }
 
 void printCommandsMenu() {

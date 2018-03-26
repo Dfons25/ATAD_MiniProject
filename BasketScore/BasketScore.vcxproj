@@ -120,14 +120,15 @@
   <ItemGroup>
     <ClCompile Include="FileHandler.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="PlayersInfo.c" />
+    <ClCompile Include="Players.c" />
+    <ClCompile Include="PlayersGrid.c" />
     <ClCompile Include="UserInterface.c" />
     <ClCompile Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileHandler.h" />
-    <ClInclude Include="PlayersInfo.h" />
     <ClInclude Include="Players.h" />
+    <ClInclude Include="PlayersGrid.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

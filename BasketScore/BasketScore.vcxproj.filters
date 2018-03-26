@@ -27,8 +27,11 @@
     <ClCompile Include="UserInterface.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayersInfo.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Players.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayersGrid.c">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,7 +41,7 @@
     <ClInclude Include="Players.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PlayersInfo.h">
+    <ClInclude Include="PlayersGrid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
