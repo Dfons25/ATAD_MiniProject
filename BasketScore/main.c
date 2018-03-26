@@ -22,13 +22,29 @@
 * Descrição do Programa
 */
 
+int equalsStringIgnoreCase(char str1[], char str2[]) {
+	return (_strcmpi(str1, str2) == 0);
+}
+
+void printCommandsMenu() {
+	printf("\n===================================================================================");
+	printf("\n                          MINI-PROJECT: Basket Scores                              ");
+	printf("\n===================================================================================");
+	printf("\nA. Info about players (LOADP, SHOWP, TABLE, SEARCH).");
+	printf("\nB. Specific info about players' performance during the games (LOADG, SEARCHG, MVP).");
+	printf("\nC. Aggregated info about games and players (MFOULP, MFOULG, FAIRPLAY).");
+	printf("\nD. Advanced indicator (IDEALTEAM)");
+	printf("\nE. Exit (QUIT)\n\n");
+	printf("COMMAND> ");
+}
 
 int main(int argc, char** argv) {
 
 	setlocale(LC_CTYPE, "Portuguese");
 	/* declaracao de variaveis */
 	char filename[20];
-	PlayersGrid grid = createPlayersGrid(200);
+	PlayersGrid playersGrid = createPlayersGrid(200);
+	StatisticsGrid statisticsGrid = createStatisticsGrid(200);
 	unsigned int option;
 
 	//importPlayersFromFile("players_1.csv");
@@ -50,9 +66,13 @@ int main(int argc, char** argv) {
 			quit = 1; /* vai provocar a saída do interpretador */
 		}
 		else if (equalsStringIgnoreCase(command, "LOADG")) {
-			/* invocação da função responsável pela respetiva
-			funcionalidade. Remover printf seguinte após implementação */
-			printf("Comando LOADG nao implementado.\n");
+
+			printf("LOADP\n\tPlease enter the name of the file: ");
+			fgets(filename, sizeof(filename), stdin);
+			filename[strlen(filename) - 1] = '\0';
+
+			importGamesFromFile(filename, &statisticsGrid);
+
 		}
 		else if (equalsStringIgnoreCase(command, "LOADP")) {
 			
@@ -60,7 +80,7 @@ int main(int argc, char** argv) {
 			fgets(filename, sizeof(filename), stdin);
 			filename[strlen(filename) - 1] = '\0';
 
-			importPlayersFromFile(filename, &grid);
+			importPlayersFromFile(filename, &playersGrid);
 			
 		}
 		else if (equalsStringIgnoreCase(command, "SHOWP")) {
@@ -71,14 +91,14 @@ int main(int argc, char** argv) {
 
 			switch (option) {
 				case 1: 
-					orderPlayersGridAsc(&grid);
+					orderPlayersGridAsc(&playersGrid);
 				break;
 				case 2:
-					orderPlayersGridDesc(&grid);
+					orderPlayersGridDesc(&playersGrid);
 				break;
 			}
 
-			printPlayersGrid(&grid);
+			printPlayersGrid(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "TABLE")) {
 			printf("Comando TABLE nao implementado.\n");
@@ -90,10 +110,20 @@ int main(int argc, char** argv) {
 			printf("Comando STATG nao implementado.\n");
 		}
 		else if (equalsStringIgnoreCase(command, "SEARCHG")) {
-			printf("Comando SEARCHG nao implementado.\n");
+
+			printf("SEARCHG\n\tID of the game?> ");
+			scanf_s("%d", &option);
+			getchar();
+
+			printGameGrid(&statisticsGrid, option);
 		}
 		else if (equalsStringIgnoreCase(command, "MVP")) {
-			printf("Comando MVP nao implementado.\n");
+
+			printf("MVP\n\tID of the game?> ");
+			scanf_s("%d", &option);
+			getchar();
+
+			printGameMVP(&statisticsGrid, option);
 		}
 		else if (equalsStringIgnoreCase(command, "MFOULG")) {
 			printf("Comando MFOULG nao implementado.\n");

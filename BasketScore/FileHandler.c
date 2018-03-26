@@ -51,3 +51,37 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 	fclose(fd);
 
 }
+
+
+void importGamesFromFile(char* filename, StatisticsGrid *grid) {
+	FILE *fd;
+	int err = fopen_s(&fd, filename, "r");
+
+	if (err != 0) {
+		printf("Não foi possivel abrir o ficheiro %s ...\n", filename);
+		return;
+	}
+
+	printf("\tThe file %s was opened", filename);
+
+	char nextline[1024];
+	int countPlayers = 0;
+
+	while (fgets(nextline, sizeof(nextline), fd)) {
+		if (strlen(nextline) < 1)
+			continue;
+
+		char **tokens = split(nextline, 7, ";");
+
+		Statistics newStatistic = createStatistics(atoi(tokens[2]), atoi(tokens[3]), atoi(tokens[4]), atoi(tokens[5]), atoi(tokens[6]));
+		PlayerGameStatistics newPlayerGameStatistics = createPlayerGameStatistics(atoi(tokens[0]), atoi(tokens[1]), newStatistic);
+
+		addStatisticsGrid(grid, newPlayerGameStatistics);
+
+		free(tokens);
+		countPlayers++;
+	}
+	printf("\n\t%d games were imported", countPlayers);
+	fclose(fd);
+
+}
