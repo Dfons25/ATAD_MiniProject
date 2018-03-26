@@ -13,7 +13,7 @@
 
 // Bibliotecas Costumizadas
 #include "UserInterface.h"
-#include "FileHandler.h"
+#include "PlayersInfo.h"
 
 /*
 * Descrição do Programa
@@ -29,7 +29,8 @@ int main(int argc, char** argv) {
 	int quit = 0;
 	while (!quit) {
 
-
+		// Limpar a variável do comando
+		memset(command, 0, sizeof(command));
 
 		printCommandsMenu();
 		fgets(command, sizeof(command), stdin);
@@ -46,7 +47,7 @@ int main(int argc, char** argv) {
 			printf("Comando LOADG nao implementado.\n");
 		}
 		else if (equalsStringIgnoreCase(command, "LOADP")) {
-			printf("Comando LOADP nao implementado.\n");
+			loadp();
 		}
 		else if (equalsStringIgnoreCase(command, "SHOWP")) {
 			printf("Comando SHOWP nao implementado.\n");
@@ -79,7 +80,7 @@ int main(int argc, char** argv) {
 			printf("Comando IDEALTEAM nao implementado.\n");
 		}
 		else {
-			printf("Comando não encontrado.\n");
+			printf("Comando nao encontrado.\n");
 		}
 	}
 

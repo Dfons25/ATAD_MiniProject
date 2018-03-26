@@ -27,12 +27,18 @@
     <ClCompile Include="UserInterface.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PlayersInfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Players.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayersInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

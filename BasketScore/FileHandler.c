@@ -25,7 +25,7 @@ void importPlayersFromFile(char* filename) {
 	int err = fopen_s(&fd, filename, "r");
 
 	if (err != 0) {
-		printf("Nao foi possivel abrir o ficheiro %s ... \n", filename);
+		printf("FICHEIRO INACESSIVEL\n", filename);
 		return;
 	}
 
@@ -53,8 +53,8 @@ void importPlayersFromFile(char* filename) {
 		
 		char playerGender = tokens[4][0]; // primeiro caracter de tokens[4]
 
-		printf("Jogador %3d : %-20s | %-10s | %02d/%02d/%04d | %c \n",
-			playerId, tokens[1], tokens[2], day, month, year, playerGender);
+		/*printf("Jogador %3d : %-20s | %-10s | %02d/%02d/%04d | %c \n",
+			playerId, tokens[1], tokens[2], day, month, year, playerGender);*/
 
 		free(tokens); // memória alocada na função 'split' tem de ser libertada
 		countPlayers++;

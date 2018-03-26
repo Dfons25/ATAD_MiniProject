@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 
 typedef struct date {
 	int day, month, year;
@@ -12,8 +13,4 @@ typedef struct player {
 	char gender;
 } Player;
 
-typedef Player* PtPlayer;
-
-Player createPlayer(unsigned int id, char name[], char team[], Date birthDate, char gender);
-Date createDate(unsigned int day, unsigned int month, unsigned int year);
 
