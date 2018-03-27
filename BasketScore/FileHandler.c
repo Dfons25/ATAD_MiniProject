@@ -38,10 +38,11 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 			continue;
 
 		char **tokens = split(nextline, 5, ";");
+		int playerId = atoi(tokens[0]);
 		int day, month, year;
 		sscanf_s(tokens[3], "%d/%d/%d", &day, &month, &year);
 
-		Player newPlayer = createPlayer(atoi(tokens[0]), tokens[1], tokens[2], createDate(day, month, year), tokens[4][0]);
+		Player newPlayer = createPlayer(playerId, tokens[1], tokens[2], createDate(day, month, year), tokens[4][0]);
 		addPlayersGrid(grid, newPlayer);
 
 		free(tokens);

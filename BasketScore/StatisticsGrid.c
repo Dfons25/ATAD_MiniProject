@@ -2,6 +2,7 @@
 #include "stdbool.h"
 
 #include "StatisticsGrid.h"
+#include "PlayersGrid.h"
 
 StatisticsGrid createStatisticsGrid(unsigned int capacity)
 {
@@ -80,3 +81,24 @@ void printGameMVP(PtStatisticsGrid _this, int idGame)
 		printf("JOGO INEXISTENTE");
 	}
 }
+
+void printStatisticsFouls(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid) {
+	int numberOfGames;
+	int numberOfFouls;
+	printf("MFOULP\n\tFOULS AVERAGE PER PLAYER\n\n\tPlayer Name          | #Played Games | Av. Fouls");
+	printf("\n\t ====================================================");
+
+	for (unsigned int x = 0; x < ptPlayersGrid->size; x++) {
+		numberOfGames = 0;
+		numberOfFouls = 0;
+		for (unsigned int y = 0; y < ptStatisticsGrid->size; y++) {
+			if (ptPlayersGrid->players[x].id == ptStatisticsGrid->playerGameStatistics[y].idPlayer) {
+				numberOfGames++;
+				numberOfFouls += ptStatisticsGrid->playerGameStatistics[y].statistics.fouls;
+			}
+		}
+		if(numberOfGames != 0 && numberOfFouls != 0){
+		printf("\n\t%-20s | %13d | %.2f", ptPlayersGrid->players[x].name, numberOfGames , (float)numberOfFouls / numberOfGames);
+		}
+	}
+};

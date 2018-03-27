@@ -57,3 +57,4 @@ void swap(Player *xp, Player *yp)
 	*xp = *yp;
 	*yp = temp;
 }
+
