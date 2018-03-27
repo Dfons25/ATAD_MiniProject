@@ -17,26 +17,12 @@
 #include "FileHandler.h"
 #include "Players.h"
 #include "PlayersGrid.h"
+#include "PlayersInfo.h"
 
 /*
 * Descrição do Programa
 */
 
-int equalsStringIgnoreCase(char str1[], char str2[]) {
-	return (_strcmpi(str1, str2) == 0);
-}
-
-void printCommandsMenu() {
-	printf("\n===================================================================================");
-	printf("\n                          MINI-PROJECT: Basket Scores                              ");
-	printf("\n===================================================================================");
-	printf("\nA. Info about players (LOADP, SHOWP, TABLE, SEARCH).");
-	printf("\nB. Specific info about players' performance during the games (LOADG, SEARCHG, MVP).");
-	printf("\nC. Aggregated info about games and players (MFOULP, MFOULG, FAIRPLAY).");
-	printf("\nD. Advanced indicator (IDEALTEAM)");
-	printf("\nE. Exit (QUIT)\n\n");
-	printf("COMMAND> ");
-}
 
 int main(int argc, char** argv) {
 
@@ -101,10 +87,10 @@ int main(int argc, char** argv) {
 			printPlayersGrid(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "TABLE")) {
-			printf("Comando TABLE nao implementado.\n");
+			drawSquadTable(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "SEARCH")) {
-			printf("Comando SEARCH nao implementado.\n");
+			printTeamPlayers(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "STATG")) {
 			printf("Comando STATG nao implementado.\n");

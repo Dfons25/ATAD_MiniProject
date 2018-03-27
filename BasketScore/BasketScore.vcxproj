@@ -122,6 +122,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="Players.c" />
     <ClCompile Include="PlayersGrid.c" />
+    <ClCompile Include="PlayersInfo.c" />
     <ClCompile Include="Statistics.c" />
     <ClCompile Include="StatisticsGrid.c" />
     <ClCompile Include="UserInterface.c" />
@@ -131,6 +132,7 @@
     <ClInclude Include="FileHandler.h" />
     <ClInclude Include="Players.h" />
     <ClInclude Include="PlayersGrid.h" />
+    <ClInclude Include="PlayersInfo.h" />
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="StatisticsGrid.h" />
   </ItemGroup>
