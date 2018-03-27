@@ -1,4 +1,6 @@
 #pragma once
+#include <stdbool.h>
+
 #include "Statistics.h"
 #include "PlayersGrid.h"
 

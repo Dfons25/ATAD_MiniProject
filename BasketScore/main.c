@@ -23,10 +23,6 @@
 * Descrição do Programa
 */
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a200d0c7c39eb91e13a2fd78810876f1726c1043
 
 int main(int argc, char** argv) {
 
@@ -125,7 +121,7 @@ int main(int argc, char** argv) {
 			printf("Comando FAIRPLAY nao implementado.\n");
 		}
 		else if (equalsStringIgnoreCase(command, "IDEALTEAM")) {
-			printf("Comando IDEALTEAM nao implementado.\n");
+			getIdealTeam(&statisticsGrid, &playersGrid);
 		}
 		else {
 			printf("Comando não encontrado.\n");

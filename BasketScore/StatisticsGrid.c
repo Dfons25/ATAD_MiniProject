@@ -1,8 +1,5 @@
 #pragma once
-#include "stdbool.h"
-
 #include "StatisticsGrid.h"
-#include "PlayersGrid.h"
 
 StatisticsGrid createStatisticsGrid(unsigned int capacity)
 {
@@ -98,7 +95,10 @@ void printStatisticsFouls(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPla
 			}
 		}
 		if(numberOfGames != 0 && numberOfFouls != 0){
-		printf("\n\t%-20s | %13d | %.2f", ptPlayersGrid->players[x].name, numberOfGames , (float)numberOfFouls / numberOfGames);
+			printf("\n\t%-20s | %13d | %.2f", ptPlayersGrid->players[x].name, numberOfGames , (float)numberOfFouls / numberOfGames);
+		}
+		else if (numberOfGames != 0 && numberOfFouls == 0) {
+			printf("\n\t%-20s | %13d | %.2f", ptPlayersGrid->players[x].name, numberOfGames, 0);
 		}
 	}
 };
