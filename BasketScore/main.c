@@ -17,12 +17,16 @@
 #include "FileHandler.h"
 #include "Players.h"
 #include "PlayersGrid.h"
+#include "PlayersInfo.h"
 
 /*
 * Descrição do Programa
 */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a200d0c7c39eb91e13a2fd78810876f1726c1043
 
 int main(int argc, char** argv) {
 
@@ -87,10 +91,10 @@ int main(int argc, char** argv) {
 			printPlayersGrid(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "TABLE")) {
-			printf("Comando TABLE nao implementado.\n");
+			drawSquadTable(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "SEARCH")) {
-			printf("Comando SEARCH nao implementado.\n");
+			printTeamPlayers(&playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "STATG")) {
 			printf("Comando STATG nao implementado.\n");

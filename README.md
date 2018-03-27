@@ -2,25 +2,25 @@
 
 TODO:
 
-- Comandos A (Informação sobre os jogadores):
+- Comandos A (InformaÃ§Ã£o sobre os jogadores):
 
-- [ ] LOADP
-- [ ] SHOWP
-- [ ] TABLE
-- [ ] SEARCH
+- [x] LOADP
+- [x] SHOWP
+- [x] TABLE
+- [x] SEARCH
 
-- Comandos B (Informação sobre o desempenho dos jogadores)
+- Comandos B (InformaÃ§Ã£o sobre o desempenho dos jogadores)
 
-- [ ] LOADG
-- [ ] SEARCHG
-- [ ] MVP
+- [x] LOADG
+- [x] SEARCHG
+- [x] MVP
 
-- Comandos C (Informação agregada sobre o jogo/jogadores)
+- Comandos C (InformaÃ§Ã£o agregada sobre o jogo/jogadores)
 
-- [ ] MFOULP
+- [x] MFOULP
 - [ ] MFOULG
 - [ ] FAIRP
 
-- Comandos D (Indicadores Avançados)
+- Comandos D (Indicadores AvanÃ§ados)
 
 - [ ] IDEALTEAM

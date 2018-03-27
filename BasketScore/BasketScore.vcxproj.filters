@@ -39,6 +39,9 @@
     <ClCompile Include="StatisticsGrid.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="PlayersInfo.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileHandler.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StatisticsGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayersInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
