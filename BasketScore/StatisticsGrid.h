@@ -17,3 +17,7 @@ void addStatisticsGrid(PtStatisticsGrid _this, PlayerGameStatistics playerGameSt
 void printGameGrid(PtStatisticsGrid _this, int idGame);
 void printGameMVP(PtStatisticsGrid _this, int idGame);
 void printStatisticsFouls(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid);
+
+
+void printPlayerFoulsPerGame(PtStatisticsGrid _this);
+void orderPlayerGameStatisticsGridAsc(PtStatisticsGrid _this);

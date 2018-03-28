@@ -102,3 +102,101 @@ void printStatisticsFouls(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPla
 		}
 	}
 };
+
+
+// MFOULG ----------------------------------------------------------------------------------------
+
+void swapA(PlayerGameStatistics *xp, PlayerGameStatistics *yp)
+{
+	PlayerGameStatistics temp = *xp;
+	*xp = *yp;
+	*yp = temp;
+}
+
+void orderPlayerGameStatisticsGridAsc(PtStatisticsGrid _this) {
+	for (unsigned int x = 0; x < _this->size - 1; x++) {
+		for (unsigned int y = 0; y < _this->size - x - 1; y++) {
+			if ((_this->playerGameStatistics[y].idGame > _this->playerGameStatistics[y + 1].idGame))	{
+				swapA(&_this->playerGameStatistics[y], &_this->playerGameStatistics[y + 1]);
+			}
+		}
+	}
+}
+
+double averageFoulsPerGame(PtStatisticsGrid _this) {
+	double sum = 0;
+	for (unsigned int i = 0; i < _this->size; i++) {
+		sum += (&_this->playerGameStatistics[i])->statistics.fouls;
+	}
+
+	return (sum/(_this->size));
+
+}
+
+PtStatisticsGrid getGameArrayById(int gameId, PtStatisticsGrid _this) {
+	StatisticsGrid temp = createStatisticsGrid(1);
+
+	for (unsigned int i = 0; i < _this->size; i++) {
+		if ((&_this->playerGameStatistics[i])->idGame == gameId) {
+			addStatisticsGrid(&temp, _this->playerGameStatistics[i]);
+		}
+	}
+	return &temp;
+}
+
+void printPlayerFoulsPerGame(PtStatisticsGrid _this) {
+	StatisticsGrid gameArray;
+
+	orderPlayerGameStatisticsGridAsc(_this);
+
+	printf("\tFOULS AVERAGE GAME\n");
+	printf("\t#Game | Av. Fouls\n");
+	printf("\t=================\n");
+
+	for (unsigned int i = 0; i < _this->size; i++) {
+		if ((&_this->playerGameStatistics[i])->idGame == 40) {
+			NULL;
+		}
+		gameArray = *(getGameArrayById((&_this->playerGameStatistics[i])->idGame, _this));
+		printf("\t%-5d| %.2f\n", (&_this->playerGameStatistics[i])->idGame,averageFoulsPerGame(&gameArray));
+		i += (gameArray.size-1);
+	}
+}
+// FAIRPLAY ----------------------------------------------------------------------------------------
+
+bool inTeamArray(char* teamArray[], char* team) {
+	int size = sizeof(teamArray) / sizeof(teamArray[0]);
+
+	for (unsigned int i = 0; i < size; i++)	{
+		if (teamArray[i] == NULL) {
+			return false;
+		} else if (!strcmp(teamArray[i], team)) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+void printFairPlayStatistic(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid) {
+	char** teams = calloc(1, sizeof(*teams));
+	int teamsSize = 0, sumGames = 0, sumFouls = 0;
+
+	for (unsigned int i = 0; i < ptPlayersGrid->size; i++) {
+
+		if (teamsSize > 0) {
+			if (inTeamArray(&teams, ptPlayersGrid->players[i].team)) {
+				continue;
+			}
+		}
+
+		teamsSize++;
+		teams = realloc(teams, teamsSize * sizeof(char*));
+		teams[teamsSize] = ptPlayersGrid->players[i].team;
+	
+		printf("Team %s", teams[teamsSize]);
+		
+	}
+
+
+}

@@ -112,13 +112,15 @@ int main(int argc, char** argv) {
 			printGameMVP(&statisticsGrid, option);
 		}
 		else if (equalsStringIgnoreCase(command, "MFOULG")) {
-			printf("Comando MFOULG nao implementado.\n");
+			printPlayerFoulsPerGame(&statisticsGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "MFOULP")) {
 			printStatisticsFouls(&statisticsGrid, &playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "FAIRPLAY")) {
-			printf("Comando FAIRPLAY nao implementado.\n");
+			importPlayersFromFile("players_1.csv", &playersGrid);
+			importGamesFromFile("games_1.csv", &statisticsGrid);
+			printFairPlayStatistic(&statisticsGrid, &playersGrid);
 		}
 		else if (equalsStringIgnoreCase(command, "IDEALTEAM")) {
 			getIdealTeam(&statisticsGrid, &playersGrid);
