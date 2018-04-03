@@ -228,12 +228,12 @@ bool existsGameInTeamInfo(PtTeamInfo _this, int gameId) {
 void orderFairPlayStatistic(PtTeamInfoGrid _this) {
 	for (unsigned int x = 0; x < _this->size - 1; x++) {
 		for (unsigned int y = 0; y < _this->size - x - 1; y++) {
-			if ((float)(_this->teamInfo[y].countGames / _this->teamInfo[y].countFouls) > 
-				(float)(_this->teamInfo[y+1].countGames / _this->teamInfo[y+1].countFouls)) {
+			if ((float)(_this->teamInfo[y].countFouls / _this->teamInfo[y].countGames) >
+				(float)(_this->teamInfo[y+1].countFouls / _this->teamInfo[y + 1].countGames)) {
 
-				TeamInfo temp = _this->teamInfo[y];
-				_this->teamInfo[y] = _this->teamInfo[y+1];
-				_this->teamInfo[y+1] = temp;
+				TeamInfo temp = *(&_this->teamInfo[y]);
+				*(&_this->teamInfo[y]) = *(&_this->teamInfo[y+1]);
+				*(&_this->teamInfo[y+1]) = temp;
 			}
 		}
 	}
@@ -269,7 +269,7 @@ void printFairPlayStatistic(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptP
 		printf("\n\tTeam %-5s| Fouls: %-2d| Games: %-2d| Fouls Average: %.2f", teamInfoGrid.teamInfo[i].team
 			, teamInfoGrid.teamInfo[i].countFouls
 			, teamInfoGrid.teamInfo[i].countGames
-			, (float) teamInfoGrid.teamInfo[i].countGames / teamInfoGrid.teamInfo[i].countFouls);
+			, (float) teamInfoGrid.teamInfo[i].countFouls / teamInfoGrid.teamInfo[i].countGames);
 	}
 	
 
