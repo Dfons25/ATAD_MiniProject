@@ -23,7 +23,6 @@
 * Descrição do Programa
 */
 
-
 int main(int argc, char** argv) {
 
 	setlocale(LC_CTYPE, "Portuguese");
@@ -32,8 +31,6 @@ int main(int argc, char** argv) {
 	PlayersGrid playersGrid = createPlayersGrid(200);
 	StatisticsGrid statisticsGrid = createStatisticsGrid(200);
 	unsigned int option;
-
-	//importPlayersFromFile("players_1.csv");
 
 	/* interpretador de comandos */
 	char command[21];

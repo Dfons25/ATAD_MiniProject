@@ -24,9 +24,6 @@
     <ClCompile Include="UserInterface.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="UserInterface.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Players.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
@@ -41,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="PlayersInfo.c">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
