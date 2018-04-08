@@ -75,25 +75,43 @@ void drawSquadTable(PtPlayersGrid _this) {
 }
 
 void getIdealTeam(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid){
+	
+	int team[5] = { 0 };
+	int position[5] = { 0,1,1,2,2 };
 	unsigned int squadType;
+	char** squadRange[6] = { "sub14", "sub16", "sub18", "senior" };
+	char** squadPostion[13] = { "CENTER", "SHOOTY GUARD", "POINT GUARD" };
+	bool teamFull = true;
 
 
-	printf("IDEALTEAM\n\tSquad range?> ");
+	printf("IDEALTEAM\n\tSquad range? (0-sub14; 1-sub16; 2-sub18; 3-senior)> ");
 	scanf_s("%d", &squadType);
 	getchar();
 	//teste
-	char gender = 'M';
-
-	int playersI[5] = { 0 };
-	playersI[0] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, 1, squadType, gender, playersI);
-	playersI[1] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, 2, squadType, gender, playersI);
-	playersI[2] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, 2, squadType, gender, playersI);
-	playersI[3] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, 3, squadType, gender, playersI);
-	playersI[4] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, 3, squadType, gender, playersI);
+	char gender = 'F';
 
 	for (int i = 0; i < 5; i++) {
-		printPlayer(&ptPlayersGrid->players[playersI[i]]);
+		team[i] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, position[i], squadType, gender, team);
+		if (team[i] == 0)
+		{
+			teamFull = false;
+		}
 	}
+
+	if(teamFull){
+		printf("\n====================================================================");
+		printf("\n Ideal %s team", squadRange[squadType]);
+		printf("\n====================================================================");
+		for (int i = 0; i < 5; i++) {
+			printf("\n   %s\n\n", squadPostion[position[i]]);
+			printPlayer(&ptPlayersGrid->players[team[i]]);
+			printf("-------------------------------------------------------------------");
+		}
+		}
+		else {
+			printf("\n\tNÃO EXISTEM JOGADORES PARA A EQUIPA IDEAL");
+		}
+	
 }
 
 int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid, int position, unsigned int squadType, char gender, int exceptions[]) {
@@ -118,13 +136,13 @@ int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGri
 					if (!checkIfInTeam(x, exceptions)){
 						numberOfGames++;
 						switch (position){
-							case 1:
+							case 0:
 								sumScore += ptStatisticsGrid->playerGameStatistics[y].statistics.assists;
 								break;
-							case 2:
+							case 1:
 								sumScore += (ptStatisticsGrid->playerGameStatistics[y].statistics.threePoints * 3) + (ptStatisticsGrid->playerGameStatistics[y].statistics.twoPoints * 2);
 								break;
-							case 3:
+							case 2:
 								sumScore += ptStatisticsGrid->playerGameStatistics[y].statistics.blocks;
 								break;
 						}
