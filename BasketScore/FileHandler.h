@@ -4,9 +4,7 @@
 #include <string.h>
 
 #include "Players.h"
-#include "PlayersGrid.h"
-#include "Statistics.h"
-#include "StatisticsGrid.h"
+#include "Games.h"
 
 void importPlayersFromFile(char* filename, PlayersGrid *grid);
 void importGamesFromFile(char* filename, StatisticsGrid *grid);

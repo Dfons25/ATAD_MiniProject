@@ -5,8 +5,7 @@
 #include <stdbool.h>
 
 #include "Players.h"
-#include "PlayersGrid.h"
-#include "StatisticsGrid.h"
+#include "FileHandler.h"
 #include "UserInterface.h"
 
 
@@ -16,16 +15,20 @@
 #define SQUAD_SENIOR 99
 
 
+// LOADP -----------------------------------
+
+void loadPlayers(PtPlayersGrid _this);
+
+// SHOWP -----------------------------------
+
+void showPlayers(PtPlayersGrid _this);
+
+// TABLE -----------------------------------
+
+void printSquadTable(PtPlayersGrid _this);
 unsigned int countPlayersSquad(PtPlayersGrid _this, int squadType, char gender);
 
-unsigned int getPlayerAge(PtPlayer _this);
-
-void drawSquadTable(PtPlayersGrid _this);
+// SEARCH ----------------------------------
 
 void printTeamPlayers(PtPlayersGrid _this);
 
-void getIdealTeam(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid);
-
-int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid, unsigned int squadType, int position, char gender, int exceptions[]);
-
-bool checkIfInTeam(int playerId, int exceptions[]);

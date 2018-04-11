@@ -21,6 +21,7 @@ char** split(char *str, int nFields, const char *delim) {
 
 void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 	FILE *fd;
+	
 	int err = fopen_s(&fd, filename, "r");
 
 	if (err != 0) {

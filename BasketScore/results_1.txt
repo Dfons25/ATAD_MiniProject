@@ -1,0 +1,741 @@
+COMMAND> loadp
+LOADP
+        Please enter the name of the file: players_1.csv
+        The file players_1.csv was opened
+        300 players were imported
+		
+		
+COMMAND> showp
+SHOWP
+        1 - Sort [A-Z]
+        2 - Sort [Z-A]
+        Option> 1
+
+        Player     | Name                 | Team            | BirthDate   | Gender |
+        ============================================================================
+        76         | Aaron Barber         | FC Porto        | 2001/08/16  | F      |
+        34         | Abigail Pierce       | Imortal         | 2002/03/08  | F      |
+        270        | Abrielle Jefferson   | Esgueira        | 1997/12/11  | F      |
+        297        | Addison Cantrell     | Esgueira        | 2003/04/21  | M      |
+        231        | Addison Flowers      | Maia Clube      | 2000/03/31  | M      |
+        167        | Adeline Hartman      | Maia Clube      | 2000/08/29  | F      |
+        206        | Adeline Terry        | Maia Clube      | 2004/05/23  | F      |
+        263        | Adriana Shaw         | Esgueira        | 2002/11/16  | F      |
+        220        | Alanna Conley        | Maia Clube      | 2000/08/01  | F      |
+        14         | Albert Waters        | Imortal         | 1999/05/18  | M      |
+        82         | Aleigha Vaughan      | FC Porto        | 1998/10/11  | F      |
+        257        | Alexa Justice        | Esgueira        | 2003/12/26  | F      |
+        13         | Alexandra Vega       | Imortal         | 2003/05/22  | F      |
+        227        | Alexandria Dickerson | Maia Clube      | 2005/05/12  | F      |
+        260        | Alexia Craft         | Esgueira        | 1996/02/26  | F      |
+        228        | Alexis Riley         | Maia Clube      | 1997/03/30  | M      |
+        196        | Alison Moses         | Maia Clube      | 1998/08/13  | M      |
+        37         | Alisson Martinez     | Imortal         | 1995/04/23  | F      |
+        201        | Alondra Herman       | Maia Clube      | 1997/02/20  | F      |
+        59         | Alvin Hill           | Imortal         | 1996/02/08  | M      |
+        293        | Amanda Wiggins       | Esgueira        | 2000/09/24  | F      |
+        274        | Amiyah Caldwell      | Esgueira        | 2004/06/19  | F      |
+        64         | Amy Rivers           | Imortal         | 1999/07/22  | F      |
+        16         | Andres Robertson     | Imortal         | 2000/03/15  | M      |
+        117        | Andrew Reese         | FC Porto        | 1998/10/14  | M      |
+        258        | Angela Harding       | Esgueira        | 2004/02/08  | F      |
+        151        | Angelica Roman       | Maia Clube      | 2004/06/01  | F      |
+        183        | Angelique Carney     | Maia Clube      | 2004/09/06  | F      |
+        53         | Angelo Hayes         | Imortal         | 1999/09/24  | M      |
+        32         | Annabelle Haney      | Imortal         | 1997/03/06  | F      |
+        290        | Annie Jimenez        | Esgueira        | 1996/09/23  | F      |
+        193        | April Carey          | Maia Clube      | 2003/07/21  | F      |
+        136        | Aria Golden          | FC Porto        | 1997/07/31  | F      |
+        141        | Arianna Lloyd        | FC Porto        | 2002/04/18  | F      |
+        74         | Arianna Russell      | FC Porto        | 1995/08/05  | F      |
+        146        | Ariel Castro         | Maia Clube      | 2003/01/10  | M      |
+        224        | Ariella Boyle        | Maia Clube      | 2003/07/30  | F      |
+        259        | Arlo Weiss           | Esgueira        | 2002/01/03  | M      |
+        6          | Armani Riley         | Imortal         | 2000/01/04  | M      |
+        90         | Aubrie Sheppard      | FC Porto        | 1998/08/11  | F      |
+        18         | Aydin Barnett        | Imortal         | 1997/10/07  | M      |
+        177        | Beckham Stuart       | Maia Clube      | 1995/01/08  | M      |
+        92         | Blake Bond           | FC Porto        | 2005/10/11  | M      |
+        51         | Blakely David        | Imortal         | 2000/04/27  | M      |
+        194        | Bowen Rush           | Maia Clube      | 2003/07/14  | M      |
+        199        | Braden Puckett       | Maia Clube      | 2005/07/25  | M      |
+        67         | Bradley Thompson     | Imortal         | 2004/06/26  | M      |
+        140        | Braelynn Cochran     | FC Porto        | 2002/03/01  | M      |
+        56         | Braelynn Johnson     | Imortal         | 1999/12/28  | M      |
+        119        | Braiden Whitehead    | FC Porto        | 2004/02/07  | M      |
+        142        | Bria Park            | FC Porto        | 1998/05/02  | M      |
+        104        | Briana Hogan         | FC Porto        | 1996/06/16  | F      |
+        240        | Briana Mckenzie      | Esgueira        | 1995/07/09  | F      |
+        62         | Briley Barrera       | Imortal         | 1995/12/23  | M      |
+        268        | Brooke Cabrera       | Esgueira        | 2005/04/20  | F      |
+        20         | Bruno Hampton        | Imortal         | 1999/02/14  | M      |
+        276        | Brycen Schmidt       | Esgueira        | 1998/01/01  | M      |
+        115        | Bryn Frost           | FC Porto        | 1996/01/05  | M      |
+        275        | Bryn Soto            | Esgueira        | 2002/09/01  | M      |
+        251        | Caitlin Spears       | Esgueira        | 2003/09/24  | M      |
+        72         | Callie Irwin         | FC Porto        | 2002/03/06  | F      |
+        78         | Camryn Schmidt       | FC Porto        | 1996/01/21  | M      |
+        7          | Carley Reilly        | Imortal         | 1998/12/01  | M      |
+        256        | Carley Wood          | Esgueira        | 1998/04/02  | M      |
+        172        | Carly Combs          | Maia Clube      | 2002/02/12  | M      |
+        39         | Carly Santos         | Imortal         | 2003/11/16  | M      |
+        248        | Carmelo Suarez       | Esgueira        | 2000/05/06  | M      |
+        107        | Carolina Hayden      | FC Porto        | 2003/06/28  | F      |
+        153        | Casen Hebert         | Maia Clube      | 2005/06/19  | M      |
+        218        | Cesar Medina         | Maia Clube      | 1999/11/12  | M      |
+        280        | Chace Emerson        | Esgueira        | 1998/02/20  | M      |
+        121        | Chaim Ellison        | FC Porto        | 2005/02/20  | M      |
+        298        | Chaim Flores         | Esgueira        | 2003/01/12  | M      |
+        80         | Charley Humphrey     | FC Porto        | 1997/10/21  | M      |
+        235        | Charli Tyson         | Maia Clube      | 2001/03/04  | M      |
+        225        | Claire Gonzalez      | Maia Clube      | 2003/05/16  | F      |
+        135        | Clayton Mayo         | FC Porto        | 2001/10/22  | M      |
+        250        | Craig Wilcox         | Esgueira        | 1995/05/24  | M      |
+        10         | Cruz Fletcher        | Imortal         | 2000/04/10  | M      |
+        252        | Dakota Leonard       | Esgueira        | 1999/03/13  | F      |
+        139        | Dane Mcintyre        | FC Porto        | 2004/04/24  | M      |
+        163        | Danika Pratt         | Maia Clube      | 2004/01/09  | F      |
+        253        | David Cortez         | Esgueira        | 2003/09/10  | M      |
+        179        | Dawson Fulton        | Maia Clube      | 2003/09/11  | M      |
+        130        | Deangelo Blackwell   | FC Porto        | 2004/02/11  | M      |
+        237        | Demetrius Landry     | Esgueira        | 2005/06/04  | M      |
+        279        | Denise Wilkinson     | Esgueira        | 2001/11/30  | F      |
+        109        | Deon Skinner         | FC Porto        | 2003/02/04  | M      |
+        158        | Derrick Compton      | Maia Clube      | 1995/05/04  | M      |
+        245        | Destinee Juarez      | Esgueira        | 2004/01/08  | F      |
+        284        | Dillon Gentry        | Esgueira        | 2000/06/05  | M      |
+        215        | Dillon Livingston    | Maia Clube      | 2003/06/01  | M      |
+        175        | Dimitri Mccullough   | Maia Clube      | 1997/11/30  | M      |
+        269        | Dorian Rich          | Esgueira        | 2003/08/24  | M      |
+        129        | Dorothy Jenkins      | FC Porto        | 1995/03/14  | F      |
+        87         | Duncan Hale          | FC Porto        | 2001/10/31  | M      |
+        46         | Ean Alford           | Imortal         | 1995/11/03  | M      |
+        17         | Eduardo Chen         | Imortal         | 2001/08/02  | M      |
+        238        | Edwin Finch          | Esgueira        | 2004/11/15  | M      |
+        192        | Edwin Vang           | Maia Clube      | 1996/08/08  | M      |
+        271        | Elisha Chambers      | Esgueira        | 2002/06/16  | F      |
+        212        | Emanuel Velasquez    | Maia Clube      | 2005/09/11  | M      |
+        152        | Emiliano Jefferson   | Maia Clube      | 2003/03/19  | M      |
+        185        | Emmalyn Elliott      | Maia Clube      | 1998/03/06  | F      |
+        200        | Ernest Garrett       | Maia Clube      | 2002/05/21  | M      |
+        205        | Esteban Welch        | Maia Clube      | 1995/06/07  | M      |
+        52         | Evelynn Burks        | Imortal         | 1997/04/03  | F      |
+        176        | Evelynn Singleton    | Maia Clube      | 2001/04/07  | M      |
+        22         | Francis Mccarty      | Imortal         | 1997/03/26  | M      |
+        169        | Frederick Buck       | Maia Clube      | 2003/08/29  | M      |
+        165        | George Marshall      | Maia Clube      | 1999/01/06  | M      |
+        43         | Gia Rogers           | Imortal         | 2000/02/29  | F      |
+        77         | Gloria Alvarado      | FC Porto        | 1998/09/04  | F      |
+        267        | Gracelyn Wilder      | Esgueira        | 2000/07/23  | F      |
+        2          | Guadalupe Hutchinson | Imortal         | 1996/02/28  | F      |
+        207        | Hadley Matthews      | Maia Clube      | 1995/07/20  | M      |
+        295        | Hamza Watson         | Esgueira        | 2000/11/26  | F      |
+        197        | Hana Burke           | Maia Clube      | 2003/11/06  | F      |
+        73         | Hank Huber           | FC Porto        | 1999/01/04  | M      |
+        70         | Hanna Webb           | Imortal         | 1996/10/29  | F      |
+        25         | Hannah George        | Imortal         | 1996/01/08  | M      |
+        209        | Harley Chase         | Maia Clube      | 2005/08/01  | M      |
+        168        | Harvey Contreras     | Maia Clube      | 1999/09/20  | M      |
+        81         | Hattie Quinn         | FC Porto        | 2004/10/17  | F      |
+        133        | Heaven Nieves        | FC Porto        | 1996/07/14  | M      |
+        100        | Helen Gillespie      | FC Porto        | 2005/11/12  | F      |
+        58         | Helen Mann           | Imortal         | 1995/09/13  | F      |
+        182        | Hudson Blair         | Maia Clube      | 2002/08/28  | M      |
+        122        | Hudson Hopper        | FC Porto        | 1999/07/05  | M      |
+        93         | Irene Campos         | FC Porto        | 1999/12/04  | F      |
+        255        | Isiah Cabrera        | Esgueira        | 2002/03/01  | M      |
+        33         | Ivan Dodson          | Imortal         | 2001/02/17  | M      |
+        31         | Izabella Hardin      | Imortal         | 1998/05/21  | F      |
+        204        | Jabari Miles         | Maia Clube      | 1998/05/18  | M      |
+        84         | Jace Patrick         | FC Porto        | 2004/05/29  | M      |
+        226        | Jaidyn Gates         | Maia Clube      | 2001/11/01  | M      |
+        138        | Janelle Casey        | FC Porto        | 2000/09/24  | F      |
+        155        | Janessa Ball         | Maia Clube      | 2003/04/12  | F      |
+        41         | Janiyah Santiago     | Imortal         | 1996/11/26  | M      |
+        105        | Jared Mercado        | FC Porto        | 2002/01/08  | M      |
+        95         | Jaron Thompson       | FC Porto        | 1999/03/28  | M      |
+        50         | Jasper Morales       | Imortal         | 2005/10/21  | M      |
+        60         | Javion Buck          | Imortal         | 1995/02/12  | M      |
+        55         | Jaylene Valentine    | Imortal         | 1996/09/09  | F      |
+        86         | Jazlyn Oneil         | FC Porto        | 2000/10/19  | M      |
+        292        | Jazmine Wilkerson    | Esgueira        | 1995/04/01  | F      |
+        45         | Jefferson Salas      | Imortal         | 1995/01/04  | M      |
+        110        | Jensen Hendrix       | FC Porto        | 1998/01/05  | M      |
+        233        | Jeremiah Sparks      | Maia Clube      | 2003/11/30  | M      |
+        112        | Jerimiah Stephens    | FC Porto        | 2004/01/14  | M      |
+        118        | Jerry Vinson         | FC Porto        | 1996/06/26  | M      |
+        8          | Jillian Trujillo     | Imortal         | 2004/09/13  | M      |
+        57         | Joanna Church        | Imortal         | 2000/04/09  | F      |
+        222        | John Davis           | Maia Clube      | 2000/02/08  | M      |
+        203        | Jolene Kent          | Maia Clube      | 2003/04/11  | F      |
+        96         | Jonas Moran          | FC Porto        | 1995/12/08  | M      |
+        75         | Jordyn Ramirez       | FC Porto        | 1995/01/21  | M      |
+        266        | Joseph Melton        | Esgueira        | 1997/06/24  | M      |
+        111        | Jovanni Cortez       | FC Porto        | 1997/08/04  | M      |
+        241        | Joyce Barnett        | Esgueira        | 2001/01/16  | M      |
+        4          | Julianna Wall        | Imortal         | 1996/08/12  | F      |
+        99         | Julie Hampton        | FC Porto        | 1996/01/18  | F      |
+        47         | Juliet Cunningham    | Imortal         | 1997/03/23  | F      |
+        217        | Julius Kelley        | Maia Clube      | 1997/06/15  | M      |
+        106        | Justus Golden        | FC Porto        | 2005/10/23  | M      |
+        63         | Justus Mclean        | Imortal         | 1995/06/22  | M      |
+        244        | Kai Duran            | Esgueira        | 2001/06/27  | M      |
+        221        | Kaia Delaney         | Maia Clube      | 2002/06/14  | F      |
+        103        | Kale Kline           | FC Porto        | 1997/11/08  | F      |
+        144        | Karla Norman         | FC Porto        | 2005/09/25  | F      |
+        114        | Karla White          | FC Porto        | 2003/08/01  | F      |
+        49         | Katie Cole           | Imortal         | 1999/03/03  | F      |
+        150        | Kayla Montgomery     | Maia Clube      | 2004/07/10  | F      |
+        249        | Kaylyn Navarro       | Esgueira        | 1996/04/15  | M      |
+        85         | Kelvin Logan         | FC Porto        | 2005/01/29  | M      |
+        124        | Kendal Gillespie     | FC Porto        | 2004/07/17  | M      |
+        186        | Kendrick Berry       | Maia Clube      | 2002/12/12  | M      |
+        131        | Kenna Navarro        | FC Porto        | 1998/09/25  | F      |
+        265        | Keyon Pollard        | Esgueira        | 2000/11/27  | M      |
+        277        | Kinley Baird         | Esgueira        | 2000/10/09  | M      |
+        134        | Kira Kerr            | FC Porto        | 1997/02/23  | F      |
+        214        | Konner Emerson       | Maia Clube      | 2000/06/10  | M      |
+        113        | Krystal Delacruz     | FC Porto        | 1998/07/18  | M      |
+        94         | Kylan Cantu          | FC Porto        | 1999/07/15  | M      |
+        19         | Kyler Harper         | Imortal         | 1995/03/22  | M      |
+        79         | Kylie Hodges         | FC Porto        | 2000/11/07  | F      |
+        154        | Kyndal Parsons       | Maia Clube      | 2000/10/27  | M      |
+        236        | Lance Blair          | Esgueira        | 1996/05/21  | M      |
+        88         | Landry Calhoun       | FC Porto        | 2005/09/30  | M      |
+        125        | Lara Bray            | FC Porto        | 2003/05/05  | F      |
+        148        | Larry Barry          | Maia Clube      | 2000/09/09  | M      |
+        156        | Laurel Leonard       | Maia Clube      | 1997/07/27  | F      |
+        11         | Laurel Massey        | Imortal         | 2003/06/25  | M      |
+        210        | Laurel Morin         | Maia Clube      | 2002/04/13  | F      |
+        97         | Leandro Taylor       | FC Porto        | 1997/11/27  | M      |
+        65         | Leanna Farrell       | Imortal         | 1999/11/01  | F      |
+        166        | Leila Fuller         | Maia Clube      | 1998/04/11  | F      |
+        282        | Leila Mclean         | Esgueira        | 1995/03/08  | F      |
+        171        | Lena Mcfadden        | Maia Clube      | 1997/09/16  | F      |
+        198        | Leon Weiss           | Maia Clube      | 1995/03/05  | M      |
+        108        | Lia Bowen            | FC Porto        | 2003/08/17  | F      |
+        164        | Liana Mccormick      | Maia Clube      | 2001/05/15  | F      |
+        189        | Liana Ruiz           | Maia Clube      | 1998/02/01  | F      |
+        208        | Lillian Good         | Maia Clube      | 1999/07/30  | F      |
+        178        | Lilyanna Dennis      | Maia Clube      | 2002/01/23  | F      |
+        254        | Lina Atkins          | Esgueira        | 1997/10/20  | F      |
+        21         | Linda Ferguson       | Imortal         | 1997/12/31  | F      |
+        1          | Linda Leach          | Imortal         | 2003/08/28  | F      |
+        190        | Lola Hines           | Maia Clube      | 1995/11/25  | F      |
+        161        | Louis Stewart        | Maia Clube      | 2001/11/06  | M      |
+        40         | Luca Mcmillan        | Imortal         | 2001/04/06  | M      |
+        102        | Luciana Williams     | FC Porto        | 2004/06/05  | F      |
+        145        | Lukas Pollard        | Maia Clube      | 1998/10/12  | M      |
+        230        | Madeleine Saunders   | Maia Clube      | 1995/03/23  | F      |
+        191        | Maggie Herman        | Maia Clube      | 2005/06/11  | F      |
+        120        | Malaya Blankenship   | FC Porto        | 1996/01/12  | F      |
+        26         | Malia Horn           | Imortal         | 1997/03/02  | F      |
+        296        | Marilyn Boyle        | Esgueira        | 2001/12/30  | F      |
+        132        | Marisa Leon          | FC Porto        | 1998/02/20  | F      |
+        66         | Marissa Byrd         | Imortal         | 1997/01/13  | F      |
+        213        | Martin Harrell       | Maia Clube      | 1997/05/24  | M      |
+        149        | Marvin Blair         | Maia Clube      | 2005/04/25  | M      |
+        12         | Max Gould            | Imortal         | 2004/11/12  | M      |
+        5          | Mayson Romero        | Imortal         | 2004/12/07  | M      |
+        283        | Melina Livingston    | Esgueira        | 1999/07/12  | F      |
+        61         | Melody Carey         | Imortal         | 1997/12/04  | F      |
+        281        | Melody Whitney       | Esgueira        | 1997/04/13  | F      |
+        285        | Messiah Cline        | Esgueira        | 1997/06/03  | M      |
+        126        | Miah Dale            | FC Porto        | 1997/01/12  | F      |
+        188        | Michelle York        | Maia Clube      | 2000/08/01  | F      |
+        219        | Mira Dillard         | Maia Clube      | 2001/07/04  | F      |
+        246        | Miriam Odonnell      | Esgueira        | 2004/08/04  | M      |
+        300        | Mohammed Andrews     | Esgueira        | 1999/03/23  | M      |
+        273        | Myles Reid           | Esgueira        | 2003/11/15  | M      |
+        15         | Nathanael Cooper     | Imortal         | 1996/05/16  | M      |
+        83         | Nehemiah Jackson     | FC Porto        | 1998/09/25  | F      |
+        286        | Nickolas Ramsey      | Esgueira        | 2002/05/14  | M      |
+        143        | Nico Atkins          | FC Porto        | 1995/03/18  | M      |
+        211        | Nicolas Black        | Maia Clube      | 1997/07/04  | M      |
+        98         | Nikolas Horton       | FC Porto        | 2000/03/04  | M      |
+        3          | Noelle Houston       | Imortal         | 2001/10/12  | F      |
+        27         | Nolan Woodard        | Imortal         | 1996/06/19  | M      |
+        48         | Nora Mooney          | Imortal         | 1997/11/06  | F      |
+        101        | Olive Dunlap         | FC Porto        | 2003/11/25  | F      |
+        29         | Oliver Morse         | Imortal         | 2002/01/20  | M      |
+        232        | Orlando Byrd         | Maia Clube      | 2004/09/27  | M      |
+        173        | Paige Trujillo       | Maia Clube      | 2001/12/19  | M      |
+        181        | Paris Marsh          | Maia Clube      | 1997/10/06  | M      |
+        38         | Pedro Mcknight       | Imortal         | 2004/01/25  | M      |
+        123        | Penelope Coleman     | FC Porto        | 1997/03/10  | F      |
+        68         | Piper Paul           | Imortal         | 2003/05/16  | M      |
+        289        | Quinn Becker         | Esgueira        | 2005/01/14  | M      |
+        234        | Rayden Lang          | Maia Clube      | 1999/01/11  | M      |
+        147        | Reese Lucas          | Maia Clube      | 1998/06/16  | M      |
+        187        | Ricardo Rush         | Maia Clube      | 2005/09/09  | M      |
+        216        | Richard Bryan        | Maia Clube      | 2002/12/14  | M      |
+        89         | Riley Acevedo        | FC Porto        | 2004/09/15  | M      |
+        202        | Rodolfo Vazquez      | Maia Clube      | 2004/10/29  | M      |
+        223        | Roselyn Tucker       | Maia Clube      | 1996/07/27  | F      |
+        127        | Rudy Combs           | FC Porto        | 1995/09/22  | F      |
+        69         | Russell Briggs       | Imortal         | 1999/09/27  | M      |
+        54         | Rylee Oneal          | Imortal         | 2005/07/07  | M      |
+        44         | Sage Baxter          | Imortal         | 1999/10/23  | M      |
+        262        | Saige Patton         | Esgueira        | 1999/05/14  | M      |
+        264        | Samara Gregory       | Esgueira        | 2005/10/14  | F      |
+        294        | Saniya Wood          | Esgueira        | 1999/11/12  | F      |
+        36         | Sariyah Moody        | Imortal         | 1996/03/15  | F      |
+        42         | Saul Wong            | Imortal         | 1995/04/29  | M      |
+        243        | Sawyer Lindsay       | Esgueira        | 2004/04/04  | M      |
+        30         | Shane Holland        | Imortal         | 2005/09/25  | F      |
+        299        | Shania Peters        | Esgueira        | 2003/03/15  | F      |
+        157        | Shannon Mccoy        | Maia Clube      | 1997/05/12  | M      |
+        291        | Sharon Craft         | Esgueira        | 1996/12/09  | M      |
+        170        | Shayla Downs         | Maia Clube      | 2002/05/17  | F      |
+        174        | Shelby Payne         | Maia Clube      | 2002/02/05  | F      |
+        128        | Shelby Perez         | FC Porto        | 1998/09/03  | F      |
+        239        | Siena Ford           | Esgueira        | 2005/05/11  | F      |
+        242        | Simone Golden        | Esgueira        | 2002/02/11  | F      |
+        159        | Sky Villarreal       | Maia Clube      | 2004/10/12  | M      |
+        229        | Steve Bullock        | Maia Clube      | 2004/09/03  | M      |
+        24         | Talia Ayala          | Imortal         | 2004/05/14  | F      |
+        23         | Tara Sloan           | Imortal         | 2005/12/30  | F      |
+        261        | Taylor Delacruz      | Esgueira        | 2004/02/05  | M      |
+        162        | Tegan Wolf           | Maia Clube      | 1996/12/31  | M      |
+        116        | Tenley Ellison       | FC Porto        | 1997/05/16  | M      |
+        287        | Thaddeus Carrillo    | Esgueira        | 2001/11/20  | M      |
+        272        | Tia Buchanan         | Esgueira        | 1998/08/25  | F      |
+        28         | Tia Long             | Imortal         | 1995/08/07  | F      |
+        288        | Trace Franks         | Esgueira        | 1998/04/04  | M      |
+        247        | Trevon Hodges        | Esgueira        | 2003/11/26  | M      |
+        278        | Tristen Neal         | Esgueira        | 2002/10/07  | M      |
+        71         | Tyler Glover         | FC Porto        | 1999/09/13  | M      |
+        184        | Uriah Hughes         | Maia Clube      | 2001/04/14  | M      |
+        91         | Vincenzo Carver      | FC Porto        | 2000/08/09  | M      |
+        35         | Westin Dale          | Imortal         | 2002/08/31  | M      |
+        160        | Whitney Gay          | Maia Clube      | 2001/09/11  | F      |
+        180        | Xander Kelley        | Maia Clube      | 1999/10/29  | M      |
+        137        | Yamileth Maldonado   | FC Porto        | 1995/08/21  | M      |
+        195        | Yareli Hewitt        | Maia Clube      | 2005/03/03  | M      |
+        9          | Zeke Farley          | Imortal         | 2000/09/09  | M      |
+
+		
+COMMAND> TABLE
+TABLE
+
+ Level/Genre| Female  Male
+===============================
+      Sub 14|   20     36
+-------------------------------
+      Sub 16|   26     32
+-------------------------------
+      Sub 18|   17     31
+-------------------------------
+     Seniors|   61     77
+-------------------------------
+
+COMMAND> search
+SEARCH
+        Name of the team?: Imortal
+        34         | Abigail Pierce       | Imortal         | 2002/03/08  | F      |
+        14         | Albert Waters        | Imortal         | 1999/05/18  | M      |
+        13         | Alexandra Vega       | Imortal         | 2003/05/22  | F      |
+        37         | Alisson Martinez     | Imortal         | 1995/04/23  | F      |
+        59         | Alvin Hill           | Imortal         | 1996/02/08  | M      |
+        64         | Amy Rivers           | Imortal         | 1999/07/22  | F      |
+        16         | Andres Robertson     | Imortal         | 2000/03/15  | M      |
+        53         | Angelo Hayes         | Imortal         | 1999/09/24  | M      |
+        32         | Annabelle Haney      | Imortal         | 1997/03/06  | F      |
+        6          | Armani Riley         | Imortal         | 2000/01/04  | M      |
+        18         | Aydin Barnett        | Imortal         | 1997/10/07  | M      |
+        51         | Blakely David        | Imortal         | 2000/04/27  | M      |
+        67         | Bradley Thompson     | Imortal         | 2004/06/26  | M      |
+        56         | Braelynn Johnson     | Imortal         | 1999/12/28  | M      |
+        62         | Briley Barrera       | Imortal         | 1995/12/23  | M      |
+        20         | Bruno Hampton        | Imortal         | 1999/02/14  | M      |
+        7          | Carley Reilly        | Imortal         | 1998/12/01  | M      |
+        39         | Carly Santos         | Imortal         | 2003/11/16  | M      |
+        10         | Cruz Fletcher        | Imortal         | 2000/04/10  | M      |
+        46         | Ean Alford           | Imortal         | 1995/11/03  | M      |
+        17         | Eduardo Chen         | Imortal         | 2001/08/02  | M      |
+        52         | Evelynn Burks        | Imortal         | 1997/04/03  | F      |
+        22         | Francis Mccarty      | Imortal         | 1997/03/26  | M      |
+        43         | Gia Rogers           | Imortal         | 2000/02/29  | F      |
+        2          | Guadalupe Hutchinson | Imortal         | 1996/02/28  | F      |
+        70         | Hanna Webb           | Imortal         | 1996/10/29  | F      |
+        25         | Hannah George        | Imortal         | 1996/01/08  | M      |
+        58         | Helen Mann           | Imortal         | 1995/09/13  | F      |
+        33         | Ivan Dodson          | Imortal         | 2001/02/17  | M      |
+        31         | Izabella Hardin      | Imortal         | 1998/05/21  | F      |
+        41         | Janiyah Santiago     | Imortal         | 1996/11/26  | M      |
+        50         | Jasper Morales       | Imortal         | 2005/10/21  | M      |
+        60         | Javion Buck          | Imortal         | 1995/02/12  | M      |
+        55         | Jaylene Valentine    | Imortal         | 1996/09/09  | F      |
+        45         | Jefferson Salas      | Imortal         | 1995/01/04  | M      |
+        8          | Jillian Trujillo     | Imortal         | 2004/09/13  | M      |
+        57         | Joanna Church        | Imortal         | 2000/04/09  | F      |
+        4          | Julianna Wall        | Imortal         | 1996/08/12  | F      |
+        47         | Juliet Cunningham    | Imortal         | 1997/03/23  | F      |
+        63         | Justus Mclean        | Imortal         | 1995/06/22  | M      |
+        49         | Katie Cole           | Imortal         | 1999/03/03  | F      |
+        19         | Kyler Harper         | Imortal         | 1995/03/22  | M      |
+        11         | Laurel Massey        | Imortal         | 2003/06/25  | M      |
+        65         | Leanna Farrell       | Imortal         | 1999/11/01  | F      |
+        21         | Linda Ferguson       | Imortal         | 1997/12/31  | F      |
+        1          | Linda Leach          | Imortal         | 2003/08/28  | F      |
+        40         | Luca Mcmillan        | Imortal         | 2001/04/06  | M      |
+        26         | Malia Horn           | Imortal         | 1997/03/02  | F      |
+        66         | Marissa Byrd         | Imortal         | 1997/01/13  | F      |
+        12         | Max Gould            | Imortal         | 2004/11/12  | M      |
+        5          | Mayson Romero        | Imortal         | 2004/12/07  | M      |
+        61         | Melody Carey         | Imortal         | 1997/12/04  | F      |
+        15         | Nathanael Cooper     | Imortal         | 1996/05/16  | M      |
+        3          | Noelle Houston       | Imortal         | 2001/10/12  | F      |
+        27         | Nolan Woodard        | Imortal         | 1996/06/19  | M      |
+        48         | Nora Mooney          | Imortal         | 1997/11/06  | F      |
+        29         | Oliver Morse         | Imortal         | 2002/01/20  | M      |
+        38         | Pedro Mcknight       | Imortal         | 2004/01/25  | M      |
+        68         | Piper Paul           | Imortal         | 2003/05/16  | M      |
+        69         | Russell Briggs       | Imortal         | 1999/09/27  | M      |
+        54         | Rylee Oneal          | Imortal         | 2005/07/07  | M      |
+        44         | Sage Baxter          | Imortal         | 1999/10/23  | M      |
+        36         | Sariyah Moody        | Imortal         | 1996/03/15  | F      |
+        42         | Saul Wong            | Imortal         | 1995/04/29  | M      |
+        30         | Shane Holland        | Imortal         | 2005/09/25  | F      |
+        24         | Talia Ayala          | Imortal         | 2004/05/14  | F      |
+        23         | Tara Sloan           | Imortal         | 2005/12/30  | F      |
+        28         | Tia Long             | Imortal         | 1995/08/07  | F      |
+        35         | Westin Dale          | Imortal         | 2002/08/31  | M      |
+        9          | Zeke Farley          | Imortal         | 2000/09/09  | M      |
+
+
+COMMAND> loadg
+LOADG
+        Please enter the name of the file: games_1.csv
+        The file games_1.csv was opened
+        517 games were imported
+
+		
+		
+COMMAND> searchg
+SEARCHG
+        ID of the game?> 1
+
+
+        ---------------------------------------------------
+        Total number of points  100
+        ---------------------------------------------------
+        Total number of blocks 80
+        ---------------------------------------------------
+        Total number of used players 12
+        ---------------------------------------------------
+
+COMMAND> MVP
+MVP
+        ID of the game?: 1
+		 ---------------------------------------------------
+        O melhor jogador em campo tem o ID 244 e um MVP =25
+		 ---------------------------------------------------
+
+
+COMMAND> mfoulp
+MFOULP
+        FOULS AVERAGE PER PLAYER
+
+        Player Name          | #Played Games | Av. Fouls
+         ====================================================
+        Linda Leach          | 2             | 3.00
+        Guadalupe Hutchinson | 3             | 1.00
+        Noelle Houston       | 3             | 3.00
+        Julianna Wall        | 2             | 2.50
+        Mayson Romero        | 2             | 4.50
+        Armani Riley         | 3             | 3.67
+        Carley Reilly        | 1             | 1.00
+        Jillian Trujillo     | 2             | 4.50
+        Zeke Farley          | 3             | 2.67
+        Cruz Fletcher        | 3             | 2.67
+        Laurel Massey        | 3             | 1.67
+        Max Gould            | 2             | 2.50
+        Alexandra Vega       | 2             | 4.00
+        Albert Waters        | 1             | 2.00
+        Nathanael Cooper     | 1             | 5.00
+        Andres Robertson     | 3             | 2.00
+        Eduardo Chen         | 3             | 2.00
+        Aydin Barnett        | 1             | 1.00
+        Kyler Harper         | 2             | 2.00
+        Bruno Hampton        | 1             | 5.00
+        Linda Ferguson       | 2             | 2.50
+        Francis Mccarty      | 1             | 3.00
+        Tara Sloan           | 4             | 3.50
+        Talia Ayala          | 4             | 2.25
+        Hannah George        | 1             | 1.00
+        Malia Horn           | 1             | 2.00
+        Nolan Woodard        | 1             | 3.00
+        Tia Long             | 2             | 2.50
+        Oliver Morse         | 3             | 3.33
+        Shane Holland        | 4             | 2.25
+        Izabella Hardin      | 2             | 3.00
+        Annabelle Haney      | 2             | 4.00
+        Ivan Dodson          | 3             | 2.67
+        Abigail Pierce       | 2             | 3.00
+        Westin Dale          | 3             | 4.00
+        Sariyah Moody        | 2             | 2.50
+        Alisson Martinez     | 1             | 2.00
+        Pedro Mcknight       | 2             | 1.00
+        Carly Santos         | 3             | 2.33
+        Luca Mcmillan        | 3             | 1.67
+        Saul Wong            | 1             | 4.00
+        Gia Rogers           | 3             | 3.67
+        Jefferson Salas      | 1             | 2.00
+        Ean Alford           | 1             | 3.00
+        Juliet Cunningham    | 1             | 0.00
+        Nora Mooney          | 1             | 4.00
+        Katie Cole           | 1             | 3.00
+        Jasper Morales       | 2             | 2.50
+        Blakely David        | 3             | 2.67
+        Evelynn Burks        | 1             | 4.00
+        Rylee Oneal          | 2             | 1.50
+        Jaylene Valentine    | 1             | 1.00
+        Joanna Church        | 3             | 1.33
+        Helen Mann           | 1             | 1.00
+        Javion Buck          | 1             | 4.00
+        Melody Carey         | 1             | 5.00
+        Briley Barrera       | 1             | 4.00
+        Justus Mclean        | 1             | 0.00
+        Amy Rivers           | 1             | 1.00
+        Leanna Farrell       | 1             | 5.00
+        Marissa Byrd         | 1             | 1.00
+        Bradley Thompson     | 2             | 4.50
+        Piper Paul           | 3             | 3.67
+        Hanna Webb           | 1             | 4.00
+        Arianna Russell      | 1             | 0.00
+        Aaron Barber         | 3             | 2.33
+        Gloria Alvarado      | 1             | 0.00
+        Kylie Hodges         | 3             | 2.67
+        Hattie Quinn         | 5             | 3.40
+        Aleigha Vaughan      | 1             | 2.00
+        Nehemiah Jackson     | 1             | 5.00
+        Jace Patrick         | 2             | 4.50
+        Kelvin Logan         | 2             | 3.00
+        Jazlyn Oneil         | 3             | 3.00
+        Duncan Hale          | 3             | 1.67
+        Landry Calhoun       | 1             | 4.00
+        Riley Acevedo        | 2             | 2.50
+        Aubrie Sheppard      | 1             | 2.00
+        Vincenzo Carver      | 3             | 2.00
+        Blake Bond           | 1             | 3.00
+        Irene Campos         | 1             | 2.00
+        Jonas Moran          | 1             | 3.00
+        Leandro Taylor       | 1             | 2.00
+        Nikolas Horton       | 3             | 0.67
+        Julie Hampton        | 1             | 5.00
+        Helen Gillespie      | 5             | 3.80
+        Luciana Williams     | 5             | 3.20
+        Kale Kline           | 1             | 3.00
+        Briana Hogan         | 1             | 3.00
+        Jared Mercado        | 2             | 0.00
+        Justus Golden        | 1             | 1.00
+        Deon Skinner         | 2             | 2.00
+        Jensen Hendrix       | 1             | 3.00
+        Jovanni Cortez       | 1             | 4.00
+        Jerimiah Stephens    | 1             | 3.00
+        Krystal Delacruz     | 1             | 0.00
+        Bryn Frost           | 1             | 1.00
+        Tenley Ellison       | 1             | 4.00
+        Andrew Reese         | 1             | 2.00
+        Jerry Vinson         | 1             | 2.00
+        Braiden Whitehead    | 1             | 3.00
+        Chaim Ellison        | 2             | 3.00
+        Hudson Hopper        | 1             | 2.00
+        Kendal Gillespie     | 2             | 2.00
+        Deangelo Blackwell   | 1             | 4.00
+        Clayton Mayo         | 3             | 1.67
+        Janelle Casey        | 3             | 2.33
+        Dane Mcintyre        | 2             | 2.50
+        Braelynn Cochran     | 2             | 2.00
+        Karla Norman         | 5             | 2.00
+        Ariel Castro         | 2             | 2.50
+        Larry Barry          | 3             | 2.00
+        Marvin Blair         | 1             | 5.00
+        Kayla Montgomery     | 5             | 2.80
+        Angelica Roman       | 5             | 1.60
+        Emiliano Jefferson   | 2             | 3.50
+        Casen Hebert         | 1             | 0.00
+        Kyndal Parsons       | 3             | 2.00
+        Janessa Ball         | 1             | 3.00
+        Laurel Leonard       | 1             | 3.00
+        Sky Villarreal       | 1             | 1.00
+        Whitney Gay          | 5             | 2.60
+        Louis Stewart        | 2             | 1.50
+        Danika Pratt         | 5             | 1.60
+        Liana Mccormick      | 5             | 2.60
+        Adeline Hartman      | 5             | 1.80
+        Frederick Buck       | 1             | 1.00
+        Shayla Downs         | 2             | 3.50
+        Lena Mcfadden        | 1             | 4.00
+        Carly Combs          | 2             | 2.50
+        Paige Trujillo       | 2             | 2.50
+        Shelby Payne         | 2             | 3.50
+        Evelynn Singleton    | 3             | 3.00
+        Lilyanna Dennis      | 2             | 2.50
+        Dawson Fulton        | 1             | 2.00
+        Hudson Blair         | 2             | 2.50
+        Angelique Carney     | 5             | 2.40
+        Uriah Hughes         | 2             | 1.00
+        Emmalyn Elliott      | 1             | 4.00
+        Kendrick Berry       | 2             | 1.50
+        Michelle York        | 5             | 1.80
+        Liana Ruiz           | 1             | 3.00
+        Lola Hines           | 1             | 2.00
+        Maggie Herman        | 5             | 1.80
+        April Carey          | 1             | 2.00
+        Bowen Rush           | 2             | 2.00
+        Yareli Hewitt        | 1             | 4.00
+        Hana Burke           | 1             | 2.00
+        Braden Puckett       | 1             | 5.00
+        Ernest Garrett       | 2             | 2.00
+        Alondra Herman       | 1             | 2.00
+        Rodolfo Vazquez      | 1             | 1.00
+        Jolene Kent          | 1             | 2.00
+        Esteban Welch        | 1             | 0.00
+        Adeline Terry        | 5             | 3.20
+        Hadley Matthews      | 1             | 2.00
+        Laurel Morin         | 2             | 3.00
+        Nicolas Black        | 1             | 3.00
+        Martin Harrell       | 1             | 2.00
+        Konner Emerson       | 3             | 2.33
+        Dillon Livingston    | 2             | 3.00
+        Richard Bryan        | 2             | 1.50
+        Julius Kelley        | 1             | 3.00
+        Cesar Medina         | 1             | 1.00
+        Mira Dillard         | 5             | 2.00
+        Alanna Conley        | 5             | 3.00
+        Kaia Delaney         | 2             | 0.50
+        John Davis           | 3             | 2.33
+        Roselyn Tucker       | 1             | 4.00
+        Ariella Boyle        | 1             | 4.00
+        Claire Gonzalez      | 1             | 4.00
+        Jaidyn Gates         | 2             | 1.50
+        Alexandria Dickerson | 5             | 1.40
+        Alexis Riley         | 1             | 2.00
+        Steve Bullock        | 1             | 3.00
+        Madeleine Saunders   | 1             | 4.00
+        Addison Flowers      | 3             | 3.00
+        Orlando Byrd         | 1             | 2.00
+        Jeremiah Sparks      | 1             | 3.00
+        Rayden Lang          | 1             | 1.00
+        Charli Tyson         | 3             | 4.33
+        Lance Blair          | 1             | 4.00
+        Demetrius Landry     | 3             | 3.67
+        Edwin Finch          | 3             | 2.67
+        Siena Ford           | 4             | 2.00
+        Briana Mckenzie      | 1             | 4.00
+        Joyce Barnett        | 3             | 3.33
+        Simone Golden        | 2             | 3.00
+        Sawyer Lindsay       | 3             | 1.67
+        Kai Duran            | 3             | 2.33
+        Destinee Juarez      | 4             | 1.25
+        Miriam Odonnell      | 3             | 1.67
+        Trevon Hodges        | 3             | 2.00
+        Carmelo Suarez       | 3             | 3.00
+        Kaylyn Navarro       | 1             | 1.00
+        Craig Wilcox         | 1             | 4.00
+        Caitlin Spears       | 3             | 2.67
+        Dakota Leonard       | 1             | 4.00
+        David Cortez         | 3             | 2.33
+        Lina Atkins          | 1             | 1.00
+        Carley Wood          | 2             | 3.50
+        Alexa Justice        | 2             | 1.50
+        Angela Harding       | 4             | 2.25
+        Alexia Craft         | 1             | 3.00
+        Taylor Delacruz      | 2             | 1.00
+        Saige Patton         | 2             | 2.00
+        Adriana Shaw         | 2             | 1.50
+        Samara Gregory       | 4             | 1.50
+        Keyon Pollard        | 3             | 3.00
+        Joseph Melton        | 1             | 3.00
+        Gracelyn Wilder      | 3             | 2.67
+        Brooke Cabrera       | 4             | 3.25
+        Dorian Rich          | 3             | 2.00
+        Abrielle Jefferson   | 2             | 4.00
+        Elisha Chambers      | 2             | 3.50
+        Tia Buchanan         | 3             | 1.33
+        Myles Reid           | 3             | 3.00
+        Amiyah Caldwell      | 4             | 3.50
+        Bryn Soto            | 1             | 1.00
+        Brycen Schmidt       | 2             | 3.50
+        Kinley Baird         | 3             | 1.00
+        Tristen Neal         | 2             | 2.50
+        Denise Wilkinson     | 3             | 2.00
+        Chace Emerson        | 2             | 3.50
+        Melody Whitney       | 3             | 2.67
+        Leila Mclean         | 2             | 1.00
+        Melina Livingston    | 3             | 2.67
+        Dillon Gentry        | 3             | 2.67
+        Messiah Cline        | 1             | 1.00
+        Thaddeus Carrillo    | 3             | 2.33
+        Trace Franks         | 1             | 1.00
+        Quinn Becker         | 3             | 1.67
+        Annie Jimenez        | 3             | 2.67
+        Jazmine Wilkerson    | 2             | 4.00
+        Amanda Wiggins       | 3             | 3.33
+        Saniya Wood          | 3             | 2.67
+        Hamza Watson         | 3             | 1.33
+        Marilyn Boyle        | 3             | 2.67
+        Addison Cantrell     | 3             | 3.33
+        Chaim Flores         | 3             | 0.67
+        Shania Peters        | 2             | 2.50
+        Mohammed Andrews     | 1             | 1.00
+
+
+COMMAND> mfoulg
+MFOULG
+        FOULS AVERAGE PER GAME
+
+        #Game | Av.Fouls
+        ================
+        01    | 2.33
+        02    | 2.50
+        03    | 2.37
+        04    | 2.33
+        05    | 1.67
+        06    | 1.75
+        07    | 2.64
+        08    | 2.91
+        09    | 2.44
+        10    | 3.00
+        11    | 1.85
+        12    | 2.80
+        13    | 2.17
+        14    | 1.87
+        15    | 2.65
+        16    | 2.43
+        17    | 3.25
+        18    | 2.75
+        19    | 2.13
+        20    | 2.00
+        21    | 3.27
+        22    | 2.11
+        23    | 3.00
+        24    | 2.53
+        25    | 3.06
+        26    | 2.38
+        27    | 2.43
+        28    | 1.54
+        29    | 2.90
+        30    | 1.57
+        31    | 2.91
+        32    | 2.60
+        33    | 3.28
+        34    | 2.68
+        35    | 2.38
+        36    | 2.17
+        37    | 2.75
+        38    | 2.27
+        39    | 2.35
+        40    | 2.68
+        41    | 2.18
+        42    | 0.00
+        43    | 0.00
+
+COMMAND> fairplay
+FAIRPLAY
+        Team: Maia Clube      | Fouls: 261  | Games: 110  | Fouls Average: 2.37
+        Team: Esgueira        | Fouls: 198  | Games: 81   | Fouls Average: 2.44
+        Team: FC Porto        | Fouls: 128  | Games: 52   | Fouls Average: 2.46
+        Team: Imortal         | Fouls: 157  | Games: 57   | Fouls Average: 2.75

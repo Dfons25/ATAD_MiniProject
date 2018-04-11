@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -98,6 +99,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -112,6 +114,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -119,23 +122,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdvanceIndicators.c" />
     <ClCompile Include="FileHandler.c" />
+    <ClCompile Include="GamesInfo.c" />
+    <ClCompile Include="PlayersPerformanceInfo.c" />
+    <ClCompile Include="Games.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Players.c" />
-    <ClCompile Include="PlayersGrid.c" />
     <ClCompile Include="PlayersInfo.c" />
-    <ClCompile Include="Statistics.c" />
-    <ClCompile Include="StatisticsGrid.c" />
     <ClCompile Include="UserInterface.c" />
     <ClCompile Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdvanceIndicators.h" />
     <ClInclude Include="FileHandler.h" />
+    <ClInclude Include="GamesInfo.h" />
     <ClInclude Include="Players.h" />
-    <ClInclude Include="PlayersGrid.h" />
     <ClInclude Include="PlayersInfo.h" />
-    <ClInclude Include="Statistics.h" />
-    <ClInclude Include="StatisticsGrid.h" />
+    <ClInclude Include="PlayersPerformanceInfo.h" />
+    <ClInclude Include="Games.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="games_1.csv" />
+    <None Include="players_1.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="results_1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

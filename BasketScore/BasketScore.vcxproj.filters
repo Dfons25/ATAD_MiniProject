@@ -15,31 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileHandler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Players.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileHandler.c">
+    <ClCompile Include="PlayersInfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UserInterface.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Players.c">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="PlayersPerformanceInfo.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayersGrid.c">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="Games.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Statistics.c">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="GamesInfo.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StatisticsGrid.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayersInfo.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UserInterface.c">
+    <ClCompile Include="AdvanceIndicators.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,20 +50,36 @@
     <ClInclude Include="FileHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Players.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayersGrid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Statistics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StatisticsGrid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PlayersInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Players.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayersPerformanceInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GamesInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Games.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvanceIndicators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="games_1.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="players_1.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="results_1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
