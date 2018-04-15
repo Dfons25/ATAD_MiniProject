@@ -64,7 +64,11 @@ void printGameMVP(PtStatisticsGrid _this) {
 	for (unsigned int x = 0; x<_this->size; x++) {
 		if (_this->playerGameStatistics[x].idGame == idGame) {
 			printf("%d", _this->playerGameStatistics[x].idGame);
-			sumScore = (_this->playerGameStatistics[x].statistics.threePoints * 3) + (_this->playerGameStatistics[x].statistics.twoPoints * 2) + _this->playerGameStatistics[x].statistics.assists + (_this->playerGameStatistics[x].statistics.blocks * 2) - (_this->playerGameStatistics[x].statistics.fouls * 3);
+			sumScore = (_this->playerGameStatistics[x].statistics.threePoints * 3) 
+					 + (_this->playerGameStatistics[x].statistics.twoPoints * 2) 
+				     + (_this->playerGameStatistics[x].statistics.assists)
+				     + (_this->playerGameStatistics[x].statistics.blocks * 2) 
+				     - (_this->playerGameStatistics[x].statistics.fouls * 3);
 			if (sumScore > mvpScore) {
 				mvpScore = sumScore;
 				mvpID = _this->playerGameStatistics[x].idPlayer;
