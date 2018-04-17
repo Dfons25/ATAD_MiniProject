@@ -41,7 +41,7 @@ double averageFoulsPerGame(PtStatisticsGrid _this) {
 
 }
 
-PtStatisticsGrid getGameArrayById(int gameId, PtStatisticsGrid _this) {
+StatisticsGrid getGameArrayById(int gameId, PtStatisticsGrid _this) {
 	StatisticsGrid temp = createStatisticsGrid(1);
 
 	for (unsigned int i = 0; i < _this->size; i++) {
@@ -49,7 +49,7 @@ PtStatisticsGrid getGameArrayById(int gameId, PtStatisticsGrid _this) {
 			addStatisticsGrid(&temp, _this->playerGameStatistics[i]);
 		}
 	}
-	return &temp;
+	return temp;
 }
 
 void printPlayerFoulsPerGame(PtStatisticsGrid _this) {
@@ -62,7 +62,7 @@ void printPlayerFoulsPerGame(PtStatisticsGrid _this) {
 	printf("\t=================\n");
 
 	for (unsigned int i = 0; i < _this->size; i++) {
-		gameArray = *(getGameArrayById((&_this->playerGameStatistics[i])->idGame, _this));
+		gameArray = getGameArrayById((&_this->playerGameStatistics[i])->idGame, _this);
 		printf("\t%02d    | %.2f\n", (&_this->playerGameStatistics[i])->idGame
 								   , averageFoulsPerGame(&gameArray));
 		i += (gameArray.size - 1);
