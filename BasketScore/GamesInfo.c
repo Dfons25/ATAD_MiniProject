@@ -63,7 +63,8 @@ void printPlayerFoulsPerGame(PtStatisticsGrid _this) {
 
 	for (unsigned int i = 0; i < _this->size; i++) {
 		gameArray = *(getGameArrayById((&_this->playerGameStatistics[i])->idGame, _this));
-		printf("\t%02d    | %.2f\n", (&_this->playerGameStatistics[i])->idGame, averageFoulsPerGame(&gameArray));
+		printf("\t%02d    | %.2f\n", (&_this->playerGameStatistics[i])->idGame
+								   , averageFoulsPerGame(&gameArray));
 		i += (gameArray.size - 1);
 	}
 }
