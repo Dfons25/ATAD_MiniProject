@@ -14,8 +14,13 @@
 
 // Bibliotecas Costumizadas
 #include "UserInterface.h"
+#include "AdvanceIndicators.h"
+#include "PlayersPerformanceInfo.h"
 #include "Players.h"
+#include "PlayersInfo.h"
+#include "GamesInfo.h"
 #include "Games.h"
+#include "VarInput.h"
 
 /*
 * Descrição do Programa
@@ -34,13 +39,11 @@ int main(int argc, char** argv) {
 	while (!quit) {
 		
 		printCommandsMenu();
-		fgets(command, sizeof(command), stdin);
+		readCharArray(command, 21);
+
 		/* descartar 'newline'. Utilizar esta técnica sempre que for lida uma
 		* string para ser utilizada, e.g., nome de ficheiro, chave, etc.. */
-		command[strlen(command) - 1] = '\0';
 
-		importPlayersFromFile("players_1.csv", &playersGrid);
-		importGamesFromFile("games_1.csv", &statisticsGrid);
 
 		if (equalsStringIgnoreCase(command, "QUIT")) {
 			quit = 1; /* vai provocar a saída do interpretador */

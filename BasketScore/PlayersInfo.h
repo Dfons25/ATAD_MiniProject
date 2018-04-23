@@ -26,7 +26,7 @@ void showPlayers(PtPlayersGrid _this);
 // TABLE -----------------------------------
 
 void printSquadTable(PtPlayersGrid _this);
-unsigned int countPlayersSquad(PtPlayersGrid _this, int squadType, char gender);
+unsigned int countPlayersSquad(PtPlayersGrid _this, unsigned int squadType, char gender);
 
 // SEARCH ----------------------------------
 

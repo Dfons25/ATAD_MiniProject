@@ -1,3 +1,5 @@
+#pragma once
+
 #include "UserInterface.h"
 
 int equalsStringIgnoreCase(char str1[], char str2[]) {

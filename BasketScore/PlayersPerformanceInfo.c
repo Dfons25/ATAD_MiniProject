@@ -2,6 +2,7 @@
 
 #include "FileHandler.h"
 #include "PlayersPerformanceInfo.h"
+#include "VarInput.h"
 
 
 // LOADG -----------------------------------
@@ -10,8 +11,7 @@ void loadGames(PtStatisticsGrid _this) {
 	char filename[20];
 
 	printf("LOADG\n\tPlease enter the name of the file: ");
-	fgets(filename, sizeof(filename), stdin);
-	filename[strlen(filename) - 1] = '\0';
+	readCharArray(filename, 20);
 
 	importGamesFromFile(filename, _this);
 };
@@ -25,8 +25,7 @@ void printGameGrid(PtStatisticsGrid _this) {
 	bool gameExists = false;
 
 	printf("SEARCHG\n\tID of the game?> ");
-	scanf_s("%d", &idGame);
-	getchar();
+	readInteger(&idGame);
 
 	for (unsigned int x = 0; x<_this->size; x++) {
 		if (_this->playerGameStatistics[x].idGame == idGame) {
@@ -56,8 +55,7 @@ void printGameMVP(PtStatisticsGrid _this) {
 	unsigned int idGame;
 
 	printf("MVP\n\tID of the game?> ");
-	scanf_s("%d", &idGame);
-	getchar();
+	readInteger(&idGame);
 
 	bool gameExists = false;
 

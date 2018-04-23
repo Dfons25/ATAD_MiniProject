@@ -36,3 +36,4 @@ typedef StatisticsGrid* PtStatisticsGrid;
 
 StatisticsGrid createStatisticsGrid(unsigned int capacity);
 void addStatisticsGrid(PtStatisticsGrid _this, PlayerGameStatistics playerGameStatistics);
+void orderPlayerGameStatisticsGrid(PtStatisticsGrid _this, unsigned int mode);

@@ -7,5 +7,5 @@
 // IDEALTEAM --------------------------------
 
 void getIdealTeam(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid);
-int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid, unsigned int squadType, int position, char gender, int exceptions[]);
+int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid, int position, unsigned int squadType, char gender, int exceptions[]);
 bool checkIfInTeam(int playerId, int exceptions[]);

@@ -1,12 +1,12 @@
 #include "PlayersInfo.h"
+#include "VarInput.h"
 
 // LOADP -----------------------------------
 void loadPlayers(PtPlayersGrid _this) {
 	char filename[20];
 
 	printf("LOADP\n\tPlease enter the name of the file: ");
-	fgets(filename, sizeof(filename), stdin);
-	filename[strlen(filename) - 1] = '\0';
+	readCharArray(filename, 20);
 
 	importPlayersFromFile(filename, _this);
 }
@@ -18,8 +18,7 @@ void showPlayers(PtPlayersGrid _this) {
 	unsigned int option;
 
 	printf("SHOWP\n\t1 - Sort [A-Z]\n\t2 - Sort [Z-A]\n\tOption> ");
-	scanf_s("%d", &option);
-	getchar();
+	readInteger(&option);
 
 	orderPlayersGrid(_this, option);
 	printPlayersGrid(_this);
@@ -29,8 +28,8 @@ void showPlayers(PtPlayersGrid _this) {
 
 // TABLE -----------------------------------
 
-unsigned int countPlayersSquad(PtPlayersGrid _this, int squadType, char gender) {
-	int range, count = 0;
+unsigned int countPlayersSquad(PtPlayersGrid _this, unsigned int squadType, char gender) {
+	unsigned int range, count = 0;
 
 	switch (squadType) {
 		case SQUAD_SUB14: range = 0; break;
@@ -80,8 +79,7 @@ void printTeamPlayers(PtPlayersGrid _this) {
 
 	printf("\tName of the team?: ");
 
-	fgets(team, sizeof(team), stdin);
-	team[strlen(team) - 1] = '\0';
+	readCharArray(team, 20);
 
 	for (unsigned int i = 0; i < _this->size; i++) {
 		if (strcmp((&_this->players[i])->team, team) == 0) {

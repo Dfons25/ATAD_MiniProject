@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Games.h"
 #include "GamesInfo.h"
 
 
@@ -23,7 +24,7 @@ void printStatisticsFouls(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPla
 		if (numberOfGames != 0 && numberOfFouls != 0) {
 			printf("\n\t%-20s | %13d | %.2f", ptPlayersGrid->players[x].name, numberOfGames, (float)numberOfFouls / numberOfGames);
 		} else if (numberOfGames != 0 && numberOfFouls == 0) {
-			printf("\n\t%-20s | %13d | %.2f", ptPlayersGrid->players[x].name, numberOfGames, 0);
+			printf("\n\t%-20s | %13d | %d", ptPlayersGrid->players[x].name, numberOfGames, 0);
 		}
 	}
 };
@@ -126,7 +127,7 @@ PtTeamInfo getTeamInfo(PtTeamInfoGrid _this, char* team) {
 }
 
 bool existsGameInTeamInfo(PtTeamInfo _this, int gameId) {
-	for (unsigned int i = 0; i < _this->countGames; i++) {
+	for (int i = 0; i < _this->countGames; i++) {
 		if (_this->gameIdArray[i] == gameId) {
 			return true;
 		}

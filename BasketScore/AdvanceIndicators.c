@@ -1,6 +1,9 @@
 #pragma once
 
 #include "AdvanceIndicators.h"
+#include "UserInterface.h"
+#include "VarInput.h"
+#include <ctype.h>
 
 // IDEALTEAM --------------------------------
 
@@ -8,17 +11,19 @@ void getIdealTeam(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid
 
 	int team[5] = { 0 };
 	int position[5] = { 0,1,1,2,2 };
-	unsigned int squadType;
+	unsigned int squadType = 1;
 	char** squadRange[6] = { "sub14", "sub16", "sub18", "senior" };
 	char** squadPostion[13] = { "CENTER", "SHOOTY GUARD", "POINT GUARD" };
 	bool teamFull = true;
+	char gender;
 
+	
+	printf("IDEALTEAM\n\tSquad range? (0-sub14; 1-sub16; 2-sub18; 3-senior) > ");
+	readInteger(&squadType);
 
-	printf("IDEALTEAM\n\tSquad range? (0-sub14; 1-sub16; 2-sub18; 3-senior)> ");
-	scanf_s("%d", &squadType);
+	printf("\n\tSquad gender? (M - Male; F - Female) > ");
+	scanf_s(" %c", &gender, 1);
 	getchar();
-	//teste
-	char gender = 'F';
 
 	for (int i = 0; i < 5; i++) {
 		team[i] = getIdealPlayer(ptStatisticsGrid, ptPlayersGrid, position[i], squadType, gender, team);
@@ -37,22 +42,22 @@ void getIdealTeam(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid
 			printf("-------------------------------------------------------------------");
 		}
 	} else {
-		printf("\n\tNÃO EXISTEM JOGADORES PARA A EQUIPA IDEAL");
+		printf("\n\tNOT ENOUGH PLAYERS TO MAKE IDEAL TEAM");
 	}
 
 }
 
 int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid, int position, unsigned int squadType, char gender, int exceptions[]) {
 
-	int squadRanges[5] = { 0, 14, 16, 18, 100 };
+	unsigned int squadRanges[5] = { 0, 14, 16, 18, 100 };
 
-	int mvpIndex = 0;
-	int mvpScore = 0;
-	int mvpAttendences = 0;
-	int mvpAge = 200;
+	unsigned int mvpIndex = 0;
+	unsigned int mvpScore = 0;
+	unsigned int mvpAttendences = 0;
+	unsigned int mvpAge = 200;
 
-	int sumScore = 0;
-	int numberOfGames;
+	unsigned int sumScore = 0;
+	unsigned int numberOfGames;
 
 
 	for (unsigned int x = 0; x < ptPlayersGrid->size; x++) {
@@ -60,7 +65,7 @@ int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGri
 		sumScore = 0;
 		for (unsigned int y = 0; y < ptStatisticsGrid->size; y++) {
 			if (ptPlayersGrid->players[x].id == ptStatisticsGrid->playerGameStatistics[y].idPlayer) {
-				if (ptPlayersGrid->players[x].gender == gender && getPlayerAge(&ptPlayersGrid->players[x]) > squadRanges[squadType] && getPlayerAge(&ptPlayersGrid->players[x]) <= squadRanges[squadType + 1]) {
+				if (ptPlayersGrid->players[x].gender == toupper(gender) && getPlayerAge(&ptPlayersGrid->players[x]) > squadRanges[squadType] && getPlayerAge(&ptPlayersGrid->players[x]) <= squadRanges[squadType + 1]) {
 					if (!checkIfInTeam(x, exceptions)) {
 						numberOfGames++;
 						switch (position) {
