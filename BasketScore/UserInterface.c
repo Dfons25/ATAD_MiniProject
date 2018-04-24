@@ -1,10 +1,38 @@
 #pragma once
 
+
 #include "UserInterface.h"
 
 int equalsStringIgnoreCase(char str1[], char str2[]) {
 	return (_strcmpi(str1, str2) == 0);
 }
+
+bool checkCommand(char command[], PtPlayersGrid players, PtStatisticsGrid games) {
+	if (equalsStringIgnoreCase(command, "SHOWP")) {
+		if (isPlayersEmpty(players)) {	return false; }
+	} else if (equalsStringIgnoreCase(command, "TABLE")) {
+		if (isPlayersEmpty(players)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "SEARCH")) {
+		if (isPlayersEmpty(players)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "SEARCHG")) {
+		if (isGamesEmpty(games)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "MVP")) {
+		if (isGamesEmpty(games)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "MFOULG")) {
+		if (isGamesEmpty(games)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "MFOULP")) {
+		if (isPlayersEmpty(players) && isGamesEmpty(games)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "FAIRPLAY")) {
+		if (isPlayersEmpty(players) && isGamesEmpty(games)) { return false; }
+	} else if (equalsStringIgnoreCase(command, "IDEALTEAM")) {
+		if (isPlayersEmpty(players) && isGamesEmpty(games)) { return false; }
+	} else {
+		return true;
+	}
+
+	return true;
+}
+
 
 void printCommandsMenu() {
 	printf("\n===================================================================================");

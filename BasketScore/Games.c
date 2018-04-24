@@ -66,3 +66,11 @@ void orderPlayerGameStatisticsGrid(PtStatisticsGrid _this, unsigned int mode) {
 		}
 	}
 }
+
+bool isGamesEmpty(PtStatisticsGrid _this) {
+	if (_this->size > 0) {
+		return false;
+	} else {
+		return true;
+	}
+};

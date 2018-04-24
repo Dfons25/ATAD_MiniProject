@@ -14,10 +14,15 @@ char** split(char *str, int nFields, const char *delim) {
 		token = strtok_s(NULL, delim, &next_token);
 	}
 
+	if (index != nFields) {
+		return NULL;
+	}
+
 	return tokens;
 
 	
 }
+
 
 void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 	FILE *fd;
@@ -39,6 +44,12 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 			continue;
 
 		char **tokens = split(nextline, 5, ";");
+
+		if (tokens == NULL && countPlayers == 0) {
+			printf("\n\tFICHEIRO INVALIDO");
+			return;
+		}
+
 		int playerId = atoi(tokens[0]);
 		int day, month, year;
 		sscanf_s(tokens[3], "%d/%d/%d", &day, &month, &year);
@@ -74,6 +85,11 @@ void importGamesFromFile(char* filename, StatisticsGrid *grid) {
 			continue;
 
 		char **tokens = split(nextline, 7, ";");
+
+		if (tokens == NULL && countPlayers == 0) {
+			printf("\n\tFICHEIRO INVALIDO");
+			return;
+		}
 
 		Statistics newStatistic = createStatistics(atoi(tokens[2]), atoi(tokens[3]), atoi(tokens[4]), atoi(tokens[5]), atoi(tokens[6]));
 		PlayerGameStatistics newPlayerGameStatistics = createPlayerGameStatistics(atoi(tokens[0]), atoi(tokens[1]), newStatistic);

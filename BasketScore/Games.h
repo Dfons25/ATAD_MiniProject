@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 // Games ----------------------------------------------------------
 
@@ -37,3 +38,4 @@ typedef StatisticsGrid* PtStatisticsGrid;
 StatisticsGrid createStatisticsGrid(unsigned int capacity);
 void addStatisticsGrid(PtStatisticsGrid _this, PlayerGameStatistics playerGameStatistics);
 void orderPlayerGameStatisticsGrid(PtStatisticsGrid _this, unsigned int mode);
+bool isGamesEmpty(PtStatisticsGrid _this);
