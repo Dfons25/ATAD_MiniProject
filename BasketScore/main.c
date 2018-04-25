@@ -1,8 +1,8 @@
 /* MINI-PROJETO 1 ATAD 2018
 * Identificacao dos Alunos:
 *
-*      Numero: 170221070 | Nome: Daniel Barreiro
-*      Numero: ######### | Nome: David Afonso
+*      Numero: 170221079 | Nome: Daniel Barreiro
+*      Numero: 170221081 | Nome: David Afonso
 *
 */
 
@@ -44,48 +44,36 @@ int main(int argc, char** argv) {
 		/* descartar 'newline'. Utilizar esta técnica sempre que for lida uma
 		* string para ser utilizada, e.g., nome de ficheiro, chave, etc.. */
 
-
-		if (equalsStringIgnoreCase(command, "QUIT")) {
-			quit = 1; /* vai provocar a saída do interpretador */
-		}
-		else if (equalsStringIgnoreCase(command, "LOADG")) {
-			loadGames(&statisticsGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "LOADP")) {		
-			loadPlayers(&playersGrid);	
-		}
-		else if (equalsStringIgnoreCase(command, "SHOWP")) {
-			showPlayers(&playersGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "TABLE")) {
-			printSquadTable(&playersGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "SEARCH")) {
-			printTeamPlayers(&playersGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "STATG")) {
-			printf("Comando STATG nao implementado.\n");
-		}
-		else if (equalsStringIgnoreCase(command, "SEARCHG")) {
-			printGameGrid(&statisticsGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "MVP")) {
-			printGameMVP(&statisticsGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "MFOULG")) {
-			printPlayerFoulsPerGame(&statisticsGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "MFOULP")) {
-			printStatisticsFouls(&statisticsGrid, &playersGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "FAIRPLAY")) {
-			printFairPlayStatistic(&statisticsGrid, &playersGrid);
-		}
-		else if (equalsStringIgnoreCase(command, "IDEALTEAM")) {
-			getIdealTeam(&statisticsGrid, &playersGrid);
-		}
-		else {
-			printf("Comando não encontrado.\n");
+		if (checkCommand(command, &playersGrid, &statisticsGrid)) {
+			if (equalsStringIgnoreCase(command, "QUIT")) {
+				quit = 1; /* vai provocar a saída do interpretador */
+			} else if (equalsStringIgnoreCase(command, "LOADG")) {
+				loadGames(&statisticsGrid);
+			} else if (equalsStringIgnoreCase(command, "LOADP")) {
+				loadPlayers(&playersGrid);
+			} else if (equalsStringIgnoreCase(command, "SHOWP")) {
+				showPlayers(&playersGrid);
+			} else if (equalsStringIgnoreCase(command, "TABLE")) {
+				printSquadTable(&playersGrid);
+			} else if (equalsStringIgnoreCase(command, "SEARCH")) {
+				printTeamPlayers(&playersGrid);
+			} else if (equalsStringIgnoreCase(command, "SEARCHG")) {
+				printGameGrid(&statisticsGrid);
+			} else if (equalsStringIgnoreCase(command, "MVP")) {
+				printGameMVP(&statisticsGrid);
+			} else if (equalsStringIgnoreCase(command, "MFOULG")) {
+				printPlayerFoulsPerGame(&statisticsGrid);
+			} else if (equalsStringIgnoreCase(command, "MFOULP")) {
+				printStatisticsFouls(&statisticsGrid, &playersGrid);
+			} else if (equalsStringIgnoreCase(command, "FAIRPLAY")) {
+				printFairPlayStatistic(&statisticsGrid, &playersGrid);
+			} else if (equalsStringIgnoreCase(command, "IDEALTEAM")) {
+				getIdealTeam(&statisticsGrid, &playersGrid);
+			} else {
+				printf("Comando não encontrado.\n");
+			}
+		} else {
+			printf("\n\tNAO EXISTE INFORMAÇÂO");
 		}
 	}
 

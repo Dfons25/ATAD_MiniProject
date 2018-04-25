@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <time.h>
 
 
@@ -38,5 +39,5 @@ PlayersGrid createPlayersGrid(unsigned int capacity);
 void addPlayersGrid(PtPlayersGrid _this, Player player);
 void printPlayersGrid(PtPlayersGrid _this);
 void orderPlayersGrid(PtPlayersGrid _this, unsigned int mode);
-
+bool isPlayersEmpty(PtPlayersGrid _this);
 

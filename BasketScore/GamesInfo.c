@@ -148,9 +148,6 @@ void orderFairPlayStatistic(PtTeamInfoGrid _this) {
 			}
 		}
 	}
-	for (unsigned int i = 0; i < _this->size; i++) {
-
-	}
 }
 
 void printFairPlayStatistic(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGrid) {
@@ -172,6 +169,7 @@ void printFairPlayStatistic(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptP
 			addGameToTeamInfo(&teamInfo, ptStatisticsGrid->playerGameStatistics[i].idGame);
 			addTeamInfo(&teamInfoGrid, teamInfo);
 		}
+
 	}
 
 	orderFairPlayStatistic(&teamInfoGrid);

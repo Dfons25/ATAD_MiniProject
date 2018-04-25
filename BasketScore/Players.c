@@ -95,3 +95,11 @@ void orderPlayersGrid(PtPlayersGrid _this, unsigned int mode) {
 	}
 }
 
+bool isPlayersEmpty(PtPlayersGrid _this) {
+	if (_this->size > 0) {
+		return false;
+	} else {
+		return true;
+	}
+};
+
