@@ -54,7 +54,7 @@ int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGri
 	unsigned int mvpIndex = 0;
 	unsigned int mvpScore = 0;
 	unsigned int mvpAttendences = 0;
-	unsigned int mvpAge = 200;
+	long mvpAge = 200;
 
 	unsigned int sumScore = 0;
 	unsigned int numberOfGames;
@@ -84,27 +84,29 @@ int getIdealPlayer(PtStatisticsGrid ptStatisticsGrid, PtPlayersGrid ptPlayersGri
 			}
 		}
 
+		
 		if (sumScore > mvpScore) {
 			mvpScore = sumScore;
-			mvpAge = getPlayerAge(&ptPlayersGrid->players[x]);
+			mvpAge = getPlayerAgeFull(&ptPlayersGrid->players[x]);
 			mvpAttendences = numberOfGames;
 			mvpIndex = x;
 		} else if (sumScore == mvpScore) {
 			if (numberOfGames > mvpAttendences) {
 				mvpScore = sumScore;
-				mvpAge = getPlayerAge(&ptPlayersGrid->players[x]);
+				mvpAge = getPlayerAgeFull(&ptPlayersGrid->players[x]);
 				mvpAttendences = numberOfGames;
 				mvpIndex = x;
 			} else if ((numberOfGames == mvpAttendences)) {
-				if (getPlayerAge(&ptPlayersGrid->players[x]) < mvpAge) {
+				if (getPlayerAgeFull(&ptPlayersGrid->players[x]) > mvpAge) {
 					mvpScore = sumScore;
-					mvpAge = getPlayerAge(&ptPlayersGrid->players[x]);
+					mvpAge = getPlayerAgeFull(&ptPlayersGrid->players[x]);
 					mvpAttendences = numberOfGames;
 					mvpIndex = x;
 				}
 			}
 		}
 	}
+	//	printf(">> score: %d; mvpAge: %d; att : %d name: %s <<\n", mvpScore, mvpAge, mvpAttendences, ptPlayersGrid->players[mvpIndex].name);
 	return mvpIndex;
 }
 
