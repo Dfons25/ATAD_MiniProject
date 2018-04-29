@@ -38,6 +38,8 @@ typedef PlayersGrid* PtPlayersGrid;
 PlayersGrid createPlayersGrid(unsigned int capacity);
 void addPlayersGrid(PtPlayersGrid _this, Player player);
 void printPlayersGrid(PtPlayersGrid _this);
+void resetPlayersGrid(PtPlayersGrid _this);
+void destroyPlayersGrid(PtPlayersGrid _this);
 void orderPlayersGrid(PtPlayersGrid _this, unsigned int mode);
 bool isPlayersEmpty(PtPlayersGrid _this);
 

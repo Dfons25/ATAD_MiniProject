@@ -77,16 +77,21 @@ void printTeamPlayers(PtPlayersGrid _this) {
 	bool teamExists = false;
 	char team[20];
 
-	printf("\tName of the team?: ");
+	printf("SEARCH\n\tName of the team?: ");
 
 	readCharArray(team, 20);
+
+	PlayersGrid temporaryPlayersGrid = createPlayersGrid(_this->capacity);
 
 	for (unsigned int i = 0; i < _this->size; i++) {
 		if (strcmp((&_this->players[i])->team, team) == 0) {
 			teamExists = true;
-			printPlayer(&_this->players[i]);
+			addPlayersGrid(&temporaryPlayersGrid,_this->players[i]);
 		}
 	}
+	orderPlayersGrid(&temporaryPlayersGrid, 1);
+	printPlayersGrid(&temporaryPlayersGrid);
+	destroyPlayersGrid(&temporaryPlayersGrid);
 
 	if (!teamExists) {
 		printf("EQUIPA INEXISTENTE!");

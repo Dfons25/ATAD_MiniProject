@@ -28,6 +28,7 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 	FILE *fd;
 	
 	int err = fopen_s(&fd, filename, "r");
+	
 
 	if (err != 0) {
 		printf("Não foi possivel abrir o ficheiro %s ...\n", filename);
@@ -35,6 +36,7 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 	}
 
 	printf("\tThe file %s was opened", filename);
+	resetPlayersGrid(grid);
 
 	char nextline[1024];
 	int countPlayers = 0;
@@ -69,6 +71,7 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 void importGamesFromFile(char* filename, StatisticsGrid *grid) {
 	FILE *fd;
 	int err = fopen_s(&fd, filename, "r");
+	
 
 	if (err != 0) {
 		printf("Não foi possivel abrir o ficheiro %s ...\n", filename);
@@ -76,9 +79,10 @@ void importGamesFromFile(char* filename, StatisticsGrid *grid) {
 	}
 
 	printf("\tThe file %s was opened", filename);
+	resetStatisticsGrid(grid);
 
 	char nextline[1024];
-	int countPlayers = 0;
+	int countGames = 0;
 
 	while (fgets(nextline, sizeof(nextline), fd)) {
 		if (strlen(nextline) < 1)
@@ -86,7 +90,7 @@ void importGamesFromFile(char* filename, StatisticsGrid *grid) {
 
 		char **tokens = split(nextline, 7, ";");
 
-		if (tokens == NULL && countPlayers == 0) {
+		if (tokens == NULL && countGames == 0) {
 			printf("\n\tFICHEIRO INVALIDO");
 			return;
 		}
@@ -97,9 +101,9 @@ void importGamesFromFile(char* filename, StatisticsGrid *grid) {
 		addStatisticsGrid(grid, newPlayerGameStatistics);
 
 		free(tokens);
-		countPlayers++;
+		countGames++;
 	}
-	printf("\n\t%d games were imported", countPlayers);
+	printf("\n\t%d games were imported", countGames);
 	fclose(fd);
 
 }

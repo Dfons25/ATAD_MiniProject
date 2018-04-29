@@ -36,13 +36,13 @@ void printGameGrid(PtStatisticsGrid _this) {
 		}
 	}
 	if (gameExists) {
-		printf("\n---------------------------------------------------");
-		printf("\nTotal number of points %d", totalPoints);
-		printf("\n---------------------------------------------------");
-		printf("\nTotal number of blocks %d", totalBlocks);
-		printf("\n---------------------------------------------------");
-		printf("\nTotal number of used players %d", totalPlayers);
-		printf("\n---------------------------------------------------");
+		printf("\n\t---------------------------------------------------");
+		printf("\n\tTotal number of points %d", totalPoints);
+		printf("\n\t---------------------------------------------------");
+		printf("\n\tTotal number of blocks %d", totalBlocks);
+		printf("\n\t---------------------------------------------------");
+		printf("\n\tTotal number of used players %d", totalPlayers);
+		printf("\n\t---------------------------------------------------");
 	} else {
 		printf("JOGO INEXISTENTE");
 	}
@@ -61,7 +61,6 @@ void printGameMVP(PtStatisticsGrid _this) {
 
 	for (unsigned int x = 0; x<_this->size; x++) {
 		if (_this->playerGameStatistics[x].idGame == idGame) {
-			printf("%d", _this->playerGameStatistics[x].idGame);
 			sumScore = (_this->playerGameStatistics[x].statistics.threePoints * 3) 
 					 + (_this->playerGameStatistics[x].statistics.twoPoints * 2) 
 				     + (_this->playerGameStatistics[x].statistics.assists)
@@ -75,9 +74,9 @@ void printGameMVP(PtStatisticsGrid _this) {
 		}
 	}
 	if (gameExists) {
-		printf("\n---------------------------------------------------");
-		printf("\nO melhor jogador em campo tem o ID %d e um MVP = %d", mvpID, mvpScore);
-		printf("\n---------------------------------------------------");
+		printf("\n\t\t---------------------------------------------------");
+		printf("\n\tO melhor jogador em campo tem o ID %d e um MVP = %d", mvpID, mvpScore);
+		printf("\n\t\t---------------------------------------------------");
 	} else {
 		printf("JOGO INEXISTENTE");
 	}

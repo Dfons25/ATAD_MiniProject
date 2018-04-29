@@ -36,6 +36,7 @@ typedef struct statisticsGrid {
 typedef StatisticsGrid* PtStatisticsGrid;
 
 StatisticsGrid createStatisticsGrid(unsigned int capacity);
+void resetStatisticsGrid(PtStatisticsGrid _this);
 void addStatisticsGrid(PtStatisticsGrid _this, PlayerGameStatistics playerGameStatistics);
 void orderPlayerGameStatisticsGrid(PtStatisticsGrid _this, unsigned int mode);
 bool isGamesEmpty(PtStatisticsGrid _this);

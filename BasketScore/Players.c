@@ -25,7 +25,7 @@ Date createDate(unsigned int day, unsigned int month, unsigned int year)
 }
 
 void printPlayer(PtPlayer _this) {
-	printf("Jogador %3d : %-20s | %-12s | %02d/%02d/%04d | %c \n", 
+	printf("\t%-7d : %-20s | %-12s | %02d/%02d/%04d | %c      |\n", 
 		_this->id,
 		_this->name,
 		_this->team,
@@ -42,6 +42,16 @@ unsigned int getPlayerAge(PtPlayer _this) {
 	localtime_s(&sysdate, &now);
 
 	return (sysdate.tm_year + 1900) - _this->birthDate.year; // tm_year começa a contagem de anos a partir de 1900
+
+};
+
+unsigned int getPlayerAgeFull(PtPlayer _this) {
+	time_t now = time(0);
+	struct tm sysdate;
+
+	localtime_s(&sysdate, &now);
+
+	return _this->birthDate.year * 10000 + _this->birthDate.month * 100 + _this->birthDate.day; // tm_year começa a contagem de anos a partir de 1900
 
 };
 
@@ -67,7 +77,17 @@ void addPlayersGrid(PtPlayersGrid _this, Player player)
 	_this->size++;
 }
 
+void resetPlayersGrid(PtPlayersGrid _this) {
+	_this->size = 0;
+}
+
+void destroyPlayersGrid(PtPlayersGrid _this) {
+	free(_this->players);
+}
+
 void printPlayersGrid(PtPlayersGrid _this) {
+	printf("\n\tPlayer\t| Name                 | Team         | BirthDate  | Gender |");
+	printf("\n\t========================================================================");
 	for (unsigned int x = 0; x<_this->size; x++) {
 		printPlayer(&_this->players[x]);
 	}
