@@ -18,9 +18,9 @@ TODO:
 - Comandos C (Informação agregada sobre o jogo/jogadores)
 
 - [x] MFOULP
-- [ ] MFOULG
-- [ ] FAIRP
+- [X] MFOULG
+- [X] FAIRP
 
 - Comandos D (Indicadores Avançados)
 
-- [ ] IDEALTEAM
+- [X] IDEALTEAM
