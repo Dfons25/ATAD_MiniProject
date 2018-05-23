@@ -38,7 +38,7 @@ void printCommandsMenu() {
 	printf("\n================================================================================");
 	printf("\n                          MINI-PROJECT: Basket Scores                              ");
 	printf("\n================================================================================");
-	printf("\nA. Info about players (LOADP, SHOWP, TABLE, SEARCH).");
+	printf("\nA. Carregar Dados (LOADP).");
 	printf("\nB. Specific info about players' performance during the games (LOADG, SEARCHG, MVP).");
 	printf("\nC. Aggregated info about games and players (MFOULP, MFOULG, FAIRPLAY).");
 	printf("\nD. Advanced indicator (IDEALTEAM)");

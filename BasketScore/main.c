@@ -14,13 +14,11 @@
 
 // Bibliotecas Costumizadas
 #include "UserInterface.h"
-#include "AdvanceIndicators.h"
-#include "PlayersPerformanceInfo.h"
 #include "Players.h"
-#include "PlayersInfo.h"
-#include "GamesInfo.h"
 #include "Games.h"
 #include "VarInput.h"
+#include "list.h"
+#include "Commands.h"
 
 /*
 * Descrição do Programa
@@ -30,26 +28,26 @@ int main(int argc, char** argv) {
 
 	setlocale(LC_CTYPE, "Portuguese");
 	/* declaracao de variaveis */
-	PlayersGrid playersGrid = createPlayersGrid(200);
-	StatisticsGrid statisticsGrid = createStatisticsGrid(200);
-
+	PtList playerList = createList(300);
+	
 	/* interpretador de comandos */
 	char command[21];
 	int quit = 0;
 	while (!quit) {
-		
+
 		printCommandsMenu();
 		readCharArray(command, 21);
 
 		/* descartar 'newline'. Utilizar esta técnica sempre que for lida uma
 		* string para ser utilizada, e.g., nome de ficheiro, chave, etc.. */
 
-		if (checkCommand(command, &playersGrid, &statisticsGrid)) {
+		//if (checkCommand(command, &playersGrid, &statisticsGrid)) {
 			if (equalsStringIgnoreCase(command, "QUIT")) {
-				quit = 1; /* vai provocar a saída do interpretador */
-			} else if (equalsStringIgnoreCase(command, "LOADG")) {
-				loadGames(&statisticsGrid);
-			} else if (equalsStringIgnoreCase(command, "LOADP")) {
+			quit = 1; /* vai provocar a saída do interpretador */
+			} else if (equalsStringIgnoreCase(command, "LOAD")) {
+				loadPlayers(playerList);
+			}
+			 /* else if (equalsStringIgnoreCase(command, "LOADP")) {
 				loadPlayers(&playersGrid);
 			} else if (equalsStringIgnoreCase(command, "SHOWP")) {
 				showPlayers(&playersGrid);
@@ -72,9 +70,9 @@ int main(int argc, char** argv) {
 			} else {
 				printf("Comando não encontrado.\n");
 			}
-		} else {
+		/*} else {
 			printf("\n\tNAO EXISTE INFORMAÇÂO");
-		}
+		}*/
 	}
 
 	/* libertar memória e apresentar mensagem de saída. */

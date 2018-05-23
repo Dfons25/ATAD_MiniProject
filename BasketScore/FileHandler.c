@@ -24,7 +24,7 @@ char** split(char *str, int nFields, const char *delim) {
 }
 
 
-void importPlayersFromFile(char* filename, PlayersGrid *grid) {
+void importPlayersFromFile(char* filename, PtList list) {
 	FILE *fd;
 	
 	int err = fopen_s(&fd, filename, "r");
@@ -36,7 +36,10 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 	}
 
 	printf("\tThe file %s was opened", filename);
-	resetPlayersGrid(grid);
+
+	if (listIsEmpty(list) != 1) {
+		listClear(list);
+	}
 
 	char nextline[1024];
 	int countPlayers = 0;
@@ -57,7 +60,7 @@ void importPlayersFromFile(char* filename, PlayersGrid *grid) {
 		sscanf_s(tokens[3], "%d/%d/%d", &day, &month, &year);
 
 		Player newPlayer = createPlayer(playerId, tokens[1], tokens[2], createDate(day, month, year), tokens[4][0]);
-		addPlayersGrid(grid, newPlayer);
+		listAdd(list, 0, newPlayer);
 
 		free(tokens);
 		countPlayers++;
