@@ -39,14 +39,14 @@
     <ClCompile Include="listElem.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="list.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Commands.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="list.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

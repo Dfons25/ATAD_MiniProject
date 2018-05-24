@@ -14,9 +14,11 @@
 
 // Bibliotecas Costumizadas
 #include "UserInterface.h"
+#include "VarInput.h"
+
 #include "Players.h"
 #include "Games.h"
-#include "VarInput.h"
+
 #include "list.h"
 #include "Commands.h"
 
@@ -26,7 +28,7 @@
 
 int main(int argc, char** argv) {
 
-	setlocale(LC_CTYPE, "Portuguese");
+	//setlocale(LC_CTYPE, "Portuguese");
 	/* declaracao de variaveis */
 	PtList playerList = createList(300);
 	
